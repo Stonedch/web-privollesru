@@ -3,3 +3,92 @@ body {
     color: #212121;
     background-color: #E2E2E2;
 }
+
+a {
+    color: #212121;
+    text-decoration: none;
+}
+
+/* .content */
+.content {
+    margin: 0 auto;
+    padding: 2rem 0;
+    max-width: 1200px;
+}
+
+/* .brand */
+.brand {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+}
+
+.brand:hover .brand__logo {
+    width: 6rem;
+}
+
+.brand:hover .brand__corp {
+    padding: 0;
+}
+
+.brand__logo {
+    width: 5rem;
+    transition: 1s;
+}
+
+.brand__corp {
+    width: 20rem;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FAFAFA;
+    line-height: 1.5rem;
+    transition: 1s;
+}
+
+/* .corp-info */
+.corp-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 19rem;
+}
+
+.corp-info__top {
+    padding-bottom: 0.4rem;
+    border-bottom: #FAFAFA 1px solid;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.corp-info__bottom {
+    padding-top: 0.3rem;
+}
+/* .header */
+.header {
+    position: relative;
+    height: 750px;
+    color: #FAFAFA;
+}
+
+.header::after {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    content: "";
+    z-index: -1;
+    background-image: url(../images/header-background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.4);
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+}
