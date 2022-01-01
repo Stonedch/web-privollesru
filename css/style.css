@@ -120,10 +120,14 @@ a {
     width: 15rem;
 }
 
-/* .column */
-.column {
+.header__column {
     display: flex;
     flex-direction: column;
+}
+
+.header__info {
+    display: none;
+    padding: 1rem;
 }
 
 /* .button */
