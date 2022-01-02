@@ -18,6 +18,12 @@
         align-items: center;
         text-align: center;
     }
+    
+    /* .mini-card */
+    .mini-card {
+        margin: .5rem;
+        width: 4rem; height: 4rem;
+    }
 }
 
 @media screen and (max-width: 899px) {
@@ -47,5 +53,15 @@
     }
     .header__title {
         width: auto;
+    }
+
+    /* .infoblock */
+    .infoblock__line {
+        /* width: */
+    }
+
+    /* .mini-card */
+    .mini-card {
+        width: 2rem; height: 2rem;
     }
 }

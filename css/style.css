@@ -176,7 +176,7 @@ a {
 }
 
 .infoblock__line {
-    width: 40rem;
+    width: 100%;
     border-bottom: 0.2rem solid #212121;
 }
 
@@ -187,7 +187,7 @@ a {
 .clients__cards {
     margin: 1rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -197,8 +197,7 @@ a {
     margin: 1rem;
     padding: 1rem 2.5rem;
     border-bottom: .3rem solid #212121;
-    width: 8rem;
-    height: 8rem;
+    width: 8rem; height: 8rem;
     display: flex;
     justify-content: center;
     opacity: .9;
@@ -212,7 +211,6 @@ a {
     height: 100%; width: 100%;
     content: "";
     z-index: -1;
-    /* background-color: #51961B; */
     background-image: url(../images/header-background.png);
     background-repeat: no-repeat;
     background-size: cover;
