@@ -25,6 +25,33 @@
         width: 4rem; height: 4rem;
     }
 
+    /* .footer */
+    .footer__content {
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+    }
+    .footer__form {
+        width: auto;
+        opacity: .9;
+    }
+    .footer__column {
+        width: auto;
+        margin-bottom: 1rem;
+    }
+
+    /* .aboutus */
+    .aboutus {
+        display: flex;
+        flex-direction: column;
+        background-color: #212121;
+        text-align: center;
+    }
+    .aboutus__name {
+        text-align: left;
+    }
+    .footer__map {
+        height: 20rem;
+    }
 }
 
 @media screen and (max-width: 899px) {
@@ -80,6 +107,7 @@
         margin-left: 0;
         padding: 1rem;
         width: auto;
+        text-align: center;
     }
     .card:nth-child(2n) {
         margin-left: 0;
@@ -94,6 +122,10 @@
     }
     .card__item {
         width: 100%;
+    }
+
+    /* .form */
+    .form {
         text-align: center;
     }
 }

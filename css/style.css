@@ -460,9 +460,8 @@ a {
 }
 
 .aboutus__phone {
-    margin-bottom: .3rem;
+    margin-bottom: 1rem;
     line-height: 1.5rem;
-    /* font-size: 1rem; */
 }
 
 .aboutus__name {
