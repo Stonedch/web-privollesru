@@ -24,6 +24,7 @@
         margin: .5rem;
         width: 4rem; height: 4rem;
     }
+
 }
 
 @media screen and (max-width: 899px) {
@@ -58,5 +59,19 @@
     /* .mini-card */
     .mini-card {
         width: 2rem; height: 2rem;
+    }
+
+    /* .export */
+    .export__content {
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        justify-content: start;
+    }
+    .export__image {
+        width: auto;
+        max-width: 100%;
+    }
+    .export__form {
+        width: auto
     }
 }
