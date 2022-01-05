@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./favicon256.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="fonts/roboto/fonts.css">
     <link rel="stylesheet" href="css/normilize.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -220,6 +221,36 @@
             </div>
         </div>
     </main>
+
+    <footer class="footer">
+        <div class="footer__content content">
+            <form class="footer__form form" action="POST">
+                <h3 class="form__title">Мы заинтересованы в сотрудничестве с Вами!</h3>
+                <span class="form__subtitle">Мы с удовольствием  бросаемся в работу над новыми задачами, обязательно свяжитесь с нами!</span>
+                <label class="form__label" for="phone-number">Введите номер телефона</label>
+                <input class="form__input" type="tel" name="phone-number" placeholder="+7 (999) 888-77-66">
+                <label class="form__label" for="name">Ваше имя</label>
+                <input class="form__input" type="text" name="name" placeholder="Иван">
+                <input class="form__button button" type="submit" value="Отправить заявку">
+            </form>
+            <div class="footer__column column">
+                <div class="column__item aboutus">
+                    <div class="footer__aboutus aboutus__phone-list">
+                        <span class="aboutus__title">Позвоните нам!</span>
+                        <span class="aboutus__name">Ксения</span>
+                        <span class="aboutus__phone"><i class="fas fa-phone"></i> +7 (930) 819-85-08</span>
+                        <span class="aboutus__name">Татьяна</span>
+                        <span class="aboutus__phone"><i class="fas fa-phone"></i> +7 (910) 386-66-61</span>
+                    </div>
+                    <div class="aboutus__address-list">
+                        <span class="aboutus__title">Мы находимся по адресу:</span>
+                        <span class="aboutus__address"><i class="fas fa-map-marker-alt"></i> г. Бор, Стеклозаводское ш., д.3 к.1, оф.307</span>
+                    </div>
+                </div>
+                <iframe class="column__item footer__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A1d45a927e0086598e25086383b2ba3fb3da2db8a65b09edd71198f789b1e0522&amp;source=constructor" frameborder="0"></iframe>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

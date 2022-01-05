@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: #212121;
-    background-color: #E2E2E2;
+    background-color: #FFF;
 }
 
 a {
@@ -242,7 +242,6 @@ a {
 
 .export__form {
     width: 100%;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 /* .form */
@@ -251,6 +250,7 @@ a {
     display: flex;
     flex-direction: column;
     background-color: #FAFAFA;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .form > * {
@@ -258,7 +258,6 @@ a {
 }
 
 .form__title {
-    /* margin: 0; */
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -383,4 +382,96 @@ a {
 
 .card__button {
     margin-top: 1rem;
+}
+
+/* .footer */
+.footer {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.footer::before {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    width: 100%; height: 100%;
+    content: '';
+    background-image: url(../images/footer-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__form {
+    width: 34%;
+}
+
+.footer__map {
+    width: 100%; height: 100%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    z-index: 0;
+}
+
+.footer__column {
+    width: 60%;
+}
+
+/* .aboutus */
+.aboutus {
+    position: relative;
+    width: auto; height: 30%;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    color: #FAFAFA;
+}
+
+.aboutus::before {
+    position: absolute;
+    top: 0; left: 0;
+    z-index: -1;
+    width: 100%; height: 100%;
+    background-color: rgba(33, 33, 33, .5);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    content: '';
+}
+
+.aboutus__phone-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutus__address-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutus__title {
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+.aboutus__phone {
+    margin-bottom: .3rem;
+    line-height: 1.5rem;
+    /* font-size: 1rem; */
+}
+
+.aboutus__name {
+    font-weight: 500;
+    border-bottom: .15rem solid #FAFAFA;
+}
+
+/* .column */
+.column {
+    display: flex;
+    flex-direction: column;
 }
