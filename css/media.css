@@ -74,4 +74,26 @@
     .export__form {
         width: auto
     }
+    
+    /* .card */
+    .card {
+        margin-left: 0;
+        padding: 1rem;
+        width: auto;
+    }
+    .card:nth-child(2n) {
+        margin-left: 0;
+    }
+    .card__subtitle {
+        max-width: none;
+    }
+    .card__items {
+        padding: 1rem;
+        max-width: none;
+        flex-direction: column;
+    }
+    .card__item {
+        width: 100%;
+        text-align: center;
+    }
 }
