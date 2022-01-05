@@ -52,6 +52,12 @@
     .footer__map {
         height: 20rem;
     }
+
+    /* .form */
+    .form {
+        display: flex;
+        align-items: center;
+    }
 }
 
 @media screen and (max-width: 899px) {
