@@ -74,7 +74,8 @@ a {
     position: relative;
     height: 750px;
     color: #FAFAFA;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(33, 33, 33, .5);
+    display: none;
 }
 
 .header::after {
@@ -83,7 +84,7 @@ a {
     height: 100%; width: 100%;
     content: "";
     z-index: -1;
-    background-image: url(../images/header-background.png);
+    background-image: url("../images/header-background.ecd7091e5466.png");
     background-repeat: no-repeat;
     background-size: cover;
     /* filter: brightness(0.4); */
@@ -103,7 +104,7 @@ a {
 
 .header__image {
     width: 25rem;
-    /* filter: brightness(0.8); */
+    filter: brightness(0.8);
 }
 
 .header__title {
@@ -201,26 +202,25 @@ a {
     width: 8rem; height: 8rem;
     display: flex;
     justify-content: center;
-    /* opacity: .9; */
+    opacity: .9;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: 1s;
-    background-color: rgba(0, 0, 0, .5);
 }
 
-.mini-card::before {
+.mini-card::after {
     position: absolute;
     top: 0; left: 0;
     height: 100%; width: 100%;
     content: "";
     z-index: -1;
-    background-image: url(../images/header-background.png);
+    background-image: url("../images/header-background.ecd7091e5466.png");
     background-repeat: no-repeat;
     background-size: cover;
-    /* filter: brightness(.6); */
+    filter: brightness(.6);
 }
 
 .mini-card:hover {
-    background-color: rgba(0, 0, 0, .75);
+    opacity: 1;
 }
 
 .mini-card__image {
@@ -302,7 +302,6 @@ a {
     color: #FAFAFA;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transition: 1s;
-    background-color: #000;
 }
 
 .card__background {
@@ -314,8 +313,7 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .5;
-    /* filter: brightness(.5); */
+    filter: brightness(.5);
 }
 
 .card:nth-child(n+2) {
@@ -400,7 +398,7 @@ a {
     z-index: -1;
     width: 100%; height: 100%;
     content: '';
-    background-image: url(../images/footer-background.png);
+    background-image: url("../images/footer-background.cb0a42d70326.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

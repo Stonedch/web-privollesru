@@ -1,0 +1,137 @@
+@media screen and (max-width: 1279px) {
+    /* .content */
+    .content {
+        width: 800px;
+    }
+
+    /* .header */
+    .header {
+        height: 30rem;
+    }
+
+    .header__image {
+        display: none;
+    }
+    
+    .header__column {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* .mini-card */
+    .mini-card {
+        margin: .5rem;
+        width: 4rem; height: 4rem;
+    }
+
+    /* .footer */
+    .footer__content {
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+    }
+    .footer__form {
+        width: auto;
+        opacity: .9;
+    }
+    .footer__column {
+        width: auto;
+        margin-bottom: 1rem;
+    }
+
+    /* .aboutus */
+    .aboutus {
+        display: flex;
+        flex-direction: column;
+        background-color: #212121;
+        text-align: center;
+    }
+    .aboutus__name {
+        text-align: left;
+    }
+    .footer__map {
+        height: 20rem;
+    }
+
+    /* .form */
+    .form {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 899px) {
+    /* .content */
+    .content {
+        width: auto;
+        padding: 1rem 2rem;
+    }
+    
+    /* .brand */
+    .brand {
+        height: 6rem;
+    }
+    .brand__corp {
+        width: auto;
+    }
+
+    /* .header */
+    .header {
+        height: auto;
+    }
+    .header__top .corp-info {
+        display: none;
+    }
+    .header__info {
+        display: block;
+    }
+    .header__title {
+        width: auto;
+    }
+
+    /* .mini-card */
+    .mini-card {
+        width: 2rem; height: 2rem;
+    }
+
+    /* .export */
+    .export__content {
+        flex-direction: column;
+        /* justify-content: flex-start; */
+        justify-content: start;
+    }
+    .export__image {
+        width: auto;
+        max-width: 100%;
+    }
+    .export__form {
+        width: auto
+    }
+    
+    /* .card */
+    .card {
+        margin-left: 0;
+        padding: 1rem;
+        width: auto;
+        text-align: center;
+    }
+    .card:nth-child(2n) {
+        margin-left: 0;
+    }
+    .card__subtitle {
+        max-width: none;
+    }
+    .card__items {
+        padding: 1rem;
+        max-width: none;
+        flex-direction: column;
+    }
+    .card__item {
+        width: 100%;
+    }
+
+    /* .form */
+    .form {
+        text-align: center;
+    }
+}
