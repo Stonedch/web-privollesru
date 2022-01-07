@@ -195,14 +195,13 @@ a {
 /* .mini-card */
 .mini-card {
     position: relative;
-    margin: 2rem;
-    /* padding: 1rem 2.5rem; */
+    margin: .5rem 0;
     padding: 1rem;
     border-bottom: .3rem solid #212121;
-    width: 8rem; height: 8rem;
+    width: 16rem; height: 8rem;
     display: flex;
-    justify-content: center;
-    /* opacity: .9; */
+    justify-content: space-around;
+    align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: 1s;
     background-color: rgba(0, 0, 0, .5);
@@ -227,7 +226,8 @@ a {
 .mini-card__image {
     background-color: #FAFAFA;
     opacity: .75;
-    width: 100%; height: 100%;
+    padding: 1rem 0;
+    width: 100%; height: 50%;
     object-fit: contain;
 }
 

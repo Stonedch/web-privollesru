@@ -91,7 +91,11 @@
 
     /* .mini-card */
     .mini-card {
+        padding: .3rem;
         width: 2rem; height: 2rem;
+    }
+    .mini-card__image {
+        padding: .5rem;
     }
 
     /* .export */
