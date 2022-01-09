@@ -96,4 +96,19 @@ STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_HOST = ''
+
+EMAIL_PORT = ''
+
+EMAIL_HOST_USER = ''
+
+EMAIL_HOST_PASSWORD = ''
+
+EMAIL_USE_TLS = ''
+
+EMAIL_USE_SSL = ''
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
