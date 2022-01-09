@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="footer__content content">
-        <form class="footer__form form" method="POST" action="{% url 'feedback' %}">
+        <form id="feedback" class="footer__form form" method="POST" action="{% url 'feedback' %}">
             {% csrf_token %}
             <h3 class="form__title">Мы заинтересованы в сотрудничестве с Вами!</h3>
             <span class="form__subtitle">Мы с удовольствием  бросаемся в работу над новыми задачами, обязательно свяжитесь с нами!</span>
