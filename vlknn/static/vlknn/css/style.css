@@ -82,7 +82,7 @@ a {
     height: 100%; width: 100%;
     content: "";
     z-index: -1;
-    background-image: url(../images/header-background.png);
+    background-image: url(../images/header-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(0.4);
@@ -211,7 +211,7 @@ a {
     height: 100%; width: 100%;
     content: "";
     z-index: -1;
-    background-image: url(../images/header-background.png);
+    background-image: url(../images/mini-card-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(.6);
