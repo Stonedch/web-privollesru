@@ -102,11 +102,12 @@ a {
 
 .header__image {
     width: 25rem;
-    /* filter: brightness(0.8); */
 }
 
 .header__title {
     width: 30rem;
+    font-size: 2rem;
+    font-weight: 700;
     line-height: 2rem;
 }
 
