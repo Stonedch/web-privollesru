@@ -1,16 +1,18 @@
-version: '3.9'
+version: '3.3'
 
 services:
 
-  backend:
+  gunicorn:
     restart: unless-stopped
     build:
       context: ./
-      dockerfile: ./docker/backend/Dockerfile
-    container_name: vlknn-backend
-    entrypoint: /usr/src/app/docker/backend/wsgi-entrypoint.sh
+      dockerfile: ./docker/django/Dockerfile
+    container_name: ${PROJECT_NAME}-gunicorn
+    entrypoint: /usr/src/app/docker/django/wsgi-entrypoint.sh
     ports:
         - 80:8000
     volumes:
       - ./docker/:/usr/src/app/docker/
-      - ./:/usr/src/app/backend/
+      - ./:/usr/src/app/
+    env_file:
+      - ./.env
