@@ -13,4 +13,9 @@ done
 
 python manage.py collectstatic --noinput
 
-gunicorn django_vlknn.wsgi --bind 0.0.0.0:8000 --workers 1 --threads 1 --log-level debug --log-file=/usr/src/app/docker/logs/gunicorn.log
+gunicorn django_vlknn.wsgi \
+    --bind 0.0.0.0:8000 \
+    --workers 1 \
+    --threads 1 \
+    --log-level debug \
+    --log-file=/usr/src/app/docker/logs/gunicorn.log

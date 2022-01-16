@@ -2,17 +2,17 @@ version: '3.3'
 
 services:
 
-  gunicorn:
-    restart: unless-stopped
-    build:
-      context: ./
-      dockerfile: ./docker/django/Dockerfile
-    container_name: ${PROJECT_NAME}-gunicorn
-    entrypoint: /usr/src/app/docker/django/wsgi-entrypoint.sh
-    ports:
-        - 80:8000
-    volumes:
-      - ./docker/:/usr/src/app/docker/
-      - ./:/usr/src/app/
-    env_file:
-      - ./.env
+    gunicorn:
+        restart: unless-stopped
+        build:
+            context: ./
+            dockerfile: ./docker/django/Dockerfile
+        container_name: ${PROJECT_NAME}-gunicorn
+        entrypoint: /usr/src/app/docker/django/wsgi-entrypoint.sh
+        ports:
+            - ${HOST_PORT}:8000
+        volumes:
+            - ./docker/:/usr/src/app/docker/
+            - ./:/usr/src/app/
+        env_file:
+            - ./.env

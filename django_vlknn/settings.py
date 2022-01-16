@@ -5,11 +5,11 @@ import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-hd&1(r7(d96!8qa4e&epuy-@t-rdblbd)opq2is(1wfv!l(_qj'
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'm8-fpkiu3z+%aa313%9661%p0$k0kj+f6%!mg_i-k4qu#jp_9)')
 
-DEBUG = True
+DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower() in ('true', '1', 't', 'y')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(' ')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -78,9 +78,21 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = 'en-us'
+USE_SMTP = os.getenv('DJANGO_USE_SMTP', 'False').lower() in ('true', '1', 't', 'y')
 
-TIME_ZONE = 'UTC'
+if USE_SMTP:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_HOST = os.getenv('EMAIL_HOST')
+    EMAIL_PORT = os.getenv('EMAIL_PORT')
+    EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+    EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'False').lower() in ('true', '1', 't', 'y')
+    EMAIL_USE_SSL = os.getenv('EMAIL_USE_SSL', 'False').lower() in ('true', '1', 't', 'y')
+    RECIPIENT_LIST = os.getenv('RECIPIENT_LIST').split(' ')
+
+LANGUAGE_CODE = os.getenv('DJANGO_LANGUAGE_CODE', 'en-us')
+
+TIME_ZONE = os.getenv('DJANGO_TIME_ZONE', 'en-us')
 
 USE_I18N = True
 
@@ -90,25 +102,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
-
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-EMAIL_HOST = ''
-
-EMAIL_PORT = ''
-
-EMAIL_HOST_USER = ''
-
-EMAIL_HOST_PASSWORD = ''
-
-EMAIL_USE_TLS = ''
-
-EMAIL_USE_SSL = ''
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
