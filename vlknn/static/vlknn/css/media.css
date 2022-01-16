@@ -18,7 +18,12 @@
         align-items: center;
         text-align: center;
     }
-    
+
+    /* .infoblock */
+    .infoblock {
+        padding: 0;
+    }
+
     /* .mini-card */
     .mini-card {
         margin: .5rem;
