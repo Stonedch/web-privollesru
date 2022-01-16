@@ -13,18 +13,12 @@
             <div class="infoblock__line"></div>
         </div>
         <div class="export__content">
-            <img class="export__image" src="{% static 'vlknn/images/airplane.jpg'%}">
-            <form class="export__form form" method="POST" action="{% url 'feedback' %}">
-                {% csrf_token %}
-                <h3 class="form__title">Доставим в Вашу страну!</h3>
-                <span class="form__subtitle">Оставьте заявку в наш Экспортный отдел!</span>
-                <span class="form__subtitle">Узнайте стоимость доставки до Вашей страны!</span>
-                <label class="form__label" for="phone-number">Введите номер телефона</label>
-                <input class="form__input" type="tel" name="phone-number" placeholder="+7 (999) 888-77-66">
-                <label class="form__label" for="name">Ваше имя</label>
-                <input class="form__input" type="text" name="name" placeholder="Иван">
-                <input class="form__button button" type="submit" value="Отправить заявку">
-            </form>
+            <div class="export__image">
+                <img class="image" src="{% static 'vlknn/images/airplane.jpg'%}">
+            </div>
+            <div class="export__form">
+                {% include 'vlknn/includes/feedback-form.html' %}
+            </div>
         </div>
     </div>
 
