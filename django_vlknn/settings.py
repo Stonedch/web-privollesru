@@ -92,7 +92,7 @@ if USE_SMTP:
 
 LANGUAGE_CODE = os.getenv('DJANGO_LANGUAGE_CODE', 'en-us')
 
-TIME_ZONE = os.getenv('DJANGO_TIME_ZONE', 'en-us')
+TIME_ZONE = os.getenv('DJANGO_TIME_ZONE', 'UTC')
 
 USE_I18N = True
 
