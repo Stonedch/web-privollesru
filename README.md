@@ -37,6 +37,12 @@ Project is: _in progress_
 
 Created by [@stonedch](https://github.com/stonedch)
 
+## License
+
+This project is licensed under the terms of the **MIT** license.
+
+>You can check out the full license [here](https://github.com/stonedch/web-privolles/blob/main/LICENSE)
+
 ## Contributing
 
 1. Fork it (<https://github.com/stonedch/web-privolles.git>)
