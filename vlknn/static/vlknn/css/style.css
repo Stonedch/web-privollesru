@@ -498,3 +498,9 @@ a {
     width: 100%; height: 100%;
     object-fit: cover;
 }
+
+/* phone_number */
+.main-footer__phone_number {
+    color: #FFF;
+    text-decoration: none;
+}
