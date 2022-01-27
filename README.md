@@ -27,6 +27,26 @@ To run this application, you will need to follow these 3 steps:
 ### 2. Local Setup and Running on Windows, Linux and Mac OS
 
     ```
+      # Clone this repository into the directory of your choice
+      $ git clone https://github.com/stonedch/web-privolles.git
+
+      # Move into project folder
+      $ cd web-privolles
+
+      # Activate the Pipenv shell
+      $ pipenv shell
+
+      # Install from Pipfile
+      $ pipenv install
+
+      # Migrate
+      $ python manage.py migrate
+
+      # Collect static
+      $ python manage.py collectstatic
+
+      # Start server
+      $ python manage.py runserver
     ```
 
 ## Status
