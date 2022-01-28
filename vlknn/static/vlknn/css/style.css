@@ -85,7 +85,7 @@ a {
     background-image: url(../images/header-background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(0.4);
+    filter: saturate(100%);
 }
 
 .header__top {
