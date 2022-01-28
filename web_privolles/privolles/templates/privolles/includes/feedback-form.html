@@ -1,0 +1,14 @@
+<form id='{{ id }}' class="form" method="POST" action="{% url 'feedback' %}">
+    {% csrf_token %}
+    <h3 class="form__title">{{ title }}</h3>
+    <span class="form__subtitle">{{ subtitle }}</span>
+    <label class="form__label" for="phone-number">Введите номер телефона</label>
+    <input class="form__input" type="tel" name="phone-number" placeholder="+7 (999) 888-77-66">
+    <label class="form__label" for="name">Ваше имя</label>
+    <input class="form__input" type="text" name="name" placeholder="Иван">
+    {% if show_product_input %}
+        <label class="form__label" for="product">Наименование, размер и вид продукции</label>
+        <input class="form__input" type="text" name="product" placeholder="Кедр, имитация бруса 19х135">
+    {% endif %}
+    <input class="form__button button" type="submit" value="Отправить заявку">
+</form>

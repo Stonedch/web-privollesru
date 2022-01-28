@@ -1,6 +1,6 @@
 #!/bin/sh
 
-until cd /usr/src/app/
+until cd /usr/src/app/web_privolles/
 do
     echo "Waiting for server volume..."
 done
@@ -13,7 +13,7 @@ done
 
 python manage.py collectstatic --noinput
 
-gunicorn django_vlknn.wsgi \
+gunicorn web_privolles.wsgi \
     --bind 0.0.0.0:8000 \
     --workers 1 \
     --threads 1 \

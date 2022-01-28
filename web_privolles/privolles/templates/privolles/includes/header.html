@@ -1,0 +1,38 @@
+{% load static %}
+
+<header class="header">
+    <div class="content">
+        <div class="header__top">
+            <a class="brand" href="/">
+                <img class="brand__logo" src="{% static 'privolles/images/logo.svg' %}" alt="logo">
+                <h1 class="brand__corp">Приволжская Лесная Компания НН</h1>
+            </a>
+            <div class="corp-info">
+                <div class="corp-info__top">
+                    <span>+7 (930) 819-85-08</span>
+                    <span>+7 (910) 386-66-61</span>
+                </div>
+                <div class="corp-info__bottom">
+                    <span>пн-вс, 08:00-18:00 (по МСК)</span>
+                </div>
+            </div>
+        </div>
+        <div class="header__content">
+            <div class="header__column">
+                <span class="header__title">Поставляем качественный лес и пиломатериалы</span>
+                <span class="header__subtitle">В любых количествах точно в срок по РФ и на экспорт.</span>
+                <a href="#feedback" class="header__link button button_opacity">Каталог продукции</a>
+                <div class="header__info corp-info">
+                    <div class="corp-info__top">
+                        <span>+7 (930) 819-85-08</span>
+                        <span>+7 (910) 386-66-61</span>
+                    </div>
+                    <div class="corp-info__bottom">
+                        <span>пн-вс, 08:00-18:00 (по МСК)</span>
+                    </div>
+                </div>
+            </div>
+            <img class="header__image" src="{% static 'privolles/images/header-image.png' %}">
+        </div>
+    </div>
+</header>

@@ -5,7 +5,7 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /usr/src/app
 
-COPY ./Pipfile ./Pipfile.lock ./
+COPY ./web_privolles/Pipfile ./web_privolles/Pipfile.lock ./
 
 RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev && pip install psycopg2
 
