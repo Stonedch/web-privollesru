@@ -13,6 +13,7 @@
         display: none;
     }
     
+    
     .header__column {
         width: 100%;
         align-items: center;
@@ -77,12 +78,17 @@
         height: 6rem;
     }
     .brand__corp {
-        width: auto;
+        /*width: auto;*/
+        display: none;
     }
 
     /* .header */
     .header {
         height: auto;
+    }
+    .header__top {
+        display: flex;
+        justify-content: center;
     }
     .header__top .corp-info {
         display: none;
@@ -92,6 +98,9 @@
     }
     .header__title {
         width: auto;
+    }
+    .header__content {
+        padding: 1.5rem 0;
     }
 
     /* .mini-card */

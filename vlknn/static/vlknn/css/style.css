@@ -24,7 +24,7 @@ a {
 }
 
 .brand:hover .brand__logo {
-    width: 6rem;
+    width: 8rem;
 }
 
 .brand:hover .brand__corp {
@@ -32,7 +32,7 @@ a {
 }
 
 .brand__logo {
-    width: 5rem;
+    width: 7rem;
     transition: 1s;
 }
 
