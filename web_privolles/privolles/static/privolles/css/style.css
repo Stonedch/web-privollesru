@@ -81,7 +81,7 @@ a {
 /* .header */
 .header {
     position: relative;
-    height: 750px;
+    height: 30rem;
     color: #FAFAFA;
 }
 
@@ -105,8 +105,12 @@ a {
 .header__content {
     padding: 3rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+.header__content.header__content_z-index-10 {
+    position: relative;
+    z-index: 10;
 }
 
 .header__image {
@@ -114,7 +118,7 @@ a {
 }
 
 .header__title {
-    width: 30rem;
+    width: 100%;
     font-size: 2rem;
     font-weight: 700;
     line-height: 2rem;
@@ -125,6 +129,11 @@ a {
     font-weight: 500;
 }
 
+.header__subtitle_mv-1rem {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .header__link {
     margin-top: 1rem;
     width: 15rem;
@@ -133,6 +142,8 @@ a {
 .header__column {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 .header__info {
@@ -151,6 +162,10 @@ a {
     text-align: center;
     background-color: #51961B;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.button_center {
+    margin: 0 auto;
 }
 
 .button_opacity {
@@ -514,3 +529,31 @@ a {
     object-fit: cover;
 }
 
+/* .background-images */
+.background-images {
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+}
+.background-images .background-images__image-wrapper {
+    position: absolute;
+}
+.background-images .background-images__image-wrapper.background-images__image-wrapper_top-20perc {
+    top: 20%;
+}
+.background-images .background-images__image-wrapper.background-images__image-wrapper_top-30perc {
+    top: 30%;
+}
+.background-images .background-images__image-wrapper.background-images__image-wrapper_left-0 {
+    left: 0;
+}
+.background-images .background-images__image-wrapper.background-images__image-wrapper_right-0 {
+    right: 0;
+}
+.background-images .background-images__image-wrapper.background-images__image-wrapper_rotate-180deg {
+    transform: rotate(180deg);
+}
+.background-images .background-images__image {
+    width: 100%; height: 100%;
+    object-fit: contain;
+}
