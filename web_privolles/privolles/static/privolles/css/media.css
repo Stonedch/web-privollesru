@@ -17,8 +17,9 @@
         text-align: center;
     }
 
-    .background-images .background-images__image-wrapper {
-        width: 50%;
+    /* .background-images */
+    .background-images {
+        display: none;
     }
 
     /* .infoblock */
