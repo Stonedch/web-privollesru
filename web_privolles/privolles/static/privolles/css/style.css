@@ -541,6 +541,9 @@ a {
 .background-images .background-images__image-wrapper.background-images__image-wrapper_top-20perc {
     top: 20%;
 }
+.background-images .background-images__image-wrapper.background-images__image-wrapper_top-25perc {
+    top: 25%;
+}
 .background-images .background-images__image-wrapper.background-images__image-wrapper_top-30perc {
     top: 30%;
 }
