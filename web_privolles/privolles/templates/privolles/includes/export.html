@@ -1,0 +1,16 @@
+{% load static %}
+
+    <div class="export content">
+        <div class="infoblock">
+            <h2 class="infoblock__title">Экспорт</h2>
+            <div class="infoblock__line"></div>
+        </div>
+        <div class="export__content">
+            <div class="export__image">
+                <img class="image" src="{% static 'privolles/images/airplane.jpg'%}">
+            </div>
+            <div class="export__form">
+                {% include 'privolles/includes/feedback-form.html' with title='Доставим в Вашу страну!' subtitle='Оставьте заявку в наш Экспортный отдел!<br>Узнайте стоимость доставки до Вашей страны!' %}
+            </div>
+        </div>
+    </div>
