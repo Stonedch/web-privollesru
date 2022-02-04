@@ -14,7 +14,7 @@ done
 python manage.py collectstatic --noinput
 
 gunicorn web_privolles.wsgi \
-    --bind 0.0.0.0:8000 \
+    --bind 0.0.0.0:80 \
     --workers 1 \
     --threads 1 \
     --log-level debug \

@@ -10,7 +10,7 @@ services:
         container_name: ${PROJECT_NAME}-gunicorn
         entrypoint: /usr/src/app/docker/django/wsgi-entrypoint.sh
         ports:
-            - ${HOST_PORT}:8000
+            - ${HOST_PORT}:80
         volumes:
             - ./docker/:/usr/src/app/docker/
             - ./:/usr/src/app/
