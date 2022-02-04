@@ -1,8 +1,0 @@
-User-Agent: *
-
-Disallow: /feedback/
-Disallow: /admin/
-
-Host: http://privolles.ru
-
-Sitemap: http://privolles.ru/sitemap.xml
