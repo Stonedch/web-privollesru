@@ -8,7 +8,6 @@
     .header {
         height: 30rem;
     }
-
     .header__image {
         display: none;
     }
@@ -16,6 +15,11 @@
         width: 100%;
         align-items: center;
         text-align: center;
+    }
+
+    /* .background-images */
+    .background-images {
+        display: none;
     }
 
     /* .infoblock */
@@ -126,17 +130,11 @@
     }
 
     /* .card */
-    .card {
-        margin-left: 0;
-        padding: 1rem;
-        width: auto;
+    .card__wrapper {
+        max-width: 100%;
+        width: 100%;
+        padding: .5rem 1rem;
         text-align: center;
-    }
-    .card:nth-child(2n) {
-        margin-left: 0;
-    }
-    .card__subtitle {
-        max-width: none;
     }
     .card__items {
         padding: 1rem;
