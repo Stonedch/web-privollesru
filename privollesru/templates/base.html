@@ -1,9 +1,33 @@
 {% load static wagtailcore_tags wagtailuserbar %}
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Пиломатериал от производителя, лиственница, кедр, доска, брус, срубы, сосна, ель">
+        <meta name="keywords" content="пиломатериал, пиломатериал из России, сосна, ель, лиственница, кедр, пиломатериалы в нижнем новгороде, купить пиломатериалы оптом от производителя">
+        <meta property="og:site_name" content="Приволжская Лесная Компания">
+        <meta property="og:title" content="Приволжская лесная компания. Пиломатериал, лиственница, кедр, доска, брус, вагонка, срубы. Надежный партнер от природы. Пиломатериалы-для каждого!">
+        <meta property="og:description" content="Пиломатериал от производителя, лиственница, кедр, доска, брус, срубы, сосна, ель">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="http://privolles.ru/static/privolles/images/header-background.jpg">
+        <meta property="og:url" content="http://privolles.ru/">
+        <meta property="og:locale" content="ru_RU">
+
+        <link rel="canonical" href="http://privolles.ru/">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+        <link rel="shortcut icon" href="{% static 'favicon256.png' %}" type="image/png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="{% static 'fonts/roboto/fonts.css' %}">
+        <link rel="stylesheet" href="{% static 'css/normilize.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/media.css' %}">
+
+        {% block extra_css %}
+        {% endblock %}
+
         <title>
             {% block title %}
                 {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ page.title }}{% endif %}
@@ -13,15 +37,6 @@
                 {% if current_site and current_site.site_name %}- {{ current_site.site_name }}{% endif %}
             {% endblock %}
         </title>
-        <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/privollesru.css' %}">
-
-        {% block extra_css %}
-            {# Override this in templates to add extra stylesheets #}
-        {% endblock %}
     </head>
 
     <body class="{% block body_class %}{% endblock %}">
@@ -29,11 +44,9 @@
 
         {% block content %}{% endblock %}
 
-        {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/privollesru.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 
-        {% block extra_js %}
-            {# Override this in templates to add extra javascript #}
-        {% endblock %}
+        {% block extra_js %}{% endblock %}
     </body>
 </html>
+

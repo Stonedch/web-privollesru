@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.urls import include, path
 from django.contrib import admin
+from django.views.generic.base import TemplateView
 
 from wagtail.admin import urls as wagtailadmin_urls
 from wagtail.core import urls as wagtail_urls
@@ -17,7 +18,6 @@ urlpatterns = [
     path('search/', search_views.search, name='search'),
 ]
 
-
 if settings.DEBUG:
     from django.conf.urls.static import static
     from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -27,5 +27,8 @@ if settings.DEBUG:
 
 urlpatterns = urlpatterns + [
     path('', include(wagtail_urls)),
+
+    path('robots.txt/', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
+    path('sitemap.xml/', TemplateView.as_view(template_name='sitemap.xml', content_type='text/plain')),
 ]
 
