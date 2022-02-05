@@ -3,6 +3,8 @@ from pathlib import Path
 
 import dj_database_url
 
+SITE_ID = 1
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'm8-fpkiu3z+%aa313%9661%p0$k0kj+f6%!mg_i-k4qu#jp_9)')
@@ -19,6 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
     'privolles',
 ]
 
