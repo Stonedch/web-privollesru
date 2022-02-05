@@ -61,7 +61,7 @@ local_settings.py
 staticfiles/
 db.sqlite3
 db.sqlite3-journal
-static/
+/static
 
 # Flask stuff:
 instance/
