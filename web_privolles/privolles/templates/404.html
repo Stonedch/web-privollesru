@@ -1,0 +1,34 @@
+{% extends "privolles/base.html" %}
+
+{% load static %}
+
+{% block title %} ПЛК НН - Страница не найдена {% endblock %}
+
+{% block content %}
+    <div class="Error404">
+        <h1>Ошибка 404</h1>
+    </div>
+
+    <div class="text1">
+        <h2>Упс..эта cтраница не найдена</h2>
+    </div>
+
+    <div class="text2">
+        <p>Приносим свои извинения,возможно эта страница была:</p>
+        <ul>
+            <li>Удаленна</li>
+            <li>Перемещенна</li>
+            <li>Переименованна</li>
+            <p>А может она временно не доступна</p>
+        </ul>
+    </div>
+
+    <div class="click">
+        <a class="card__button button button_opacity" href="{% url 'index' %}">Вернуться</a>
+    </div>
+
+    <div class="imgO">
+        <img  src="privolles/static/privolles/images/logo-v.2 1.svg" width="490" height="490" align="middle">
+    </div>
+{% endblock %}
+
