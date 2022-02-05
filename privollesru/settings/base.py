@@ -4,7 +4,7 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower() in ('true', 't', 'y', 1)
+DEBUG = os.getenv('DJANGO_DEBUG', 1).lower() in ('true', 't', 'y', 1)
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'ac-le5bg%m@jw2o*=@mv8&jo!f*kv7drbm@$32ir8u7+)s)4^f')
 
