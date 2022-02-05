@@ -14,4 +14,16 @@ services:
             - ./:/srv/www/
         env_file:
             - ./.env
+        depends_on:
+            - database
+
+    database:
+        image: postgres:13-alpine
+        container_name: ${PROJECT_NAME}-database
+        volumes:
+            - ./docker/postgresql/data:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_DB=${SQL_DATABASE}
+            - POSTGRES_USER=${SQL_USER}
+            - POSTGRES_PASSWORD=${SQL_PASSWORD}
 
