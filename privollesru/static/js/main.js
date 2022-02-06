@@ -54,13 +54,23 @@ $(document).ready(function () {
 
     const clientsCarousel = new Swiper('#clientsCarousel', {
         speed: 400,
-        spaceBetween: 30,
-        slidesPerView: 5,
+        spaceBetween: 10,
+        slidesPerView: 1,
         centeredSlides: true,
         loop: true,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
+        },
+        breakpoints: {
+            900: {
+                slidesPerView: 3,
+                spaceBetween: 15,
+            },
+            1280: {
+                slidesPerView: 5,
+                spaceBetween: 30,
+            },
         },
     });
 });

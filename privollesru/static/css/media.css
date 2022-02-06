@@ -27,12 +27,6 @@
         padding: 0;
     }
 
-    /* .mini-card */
-    .mini-card {
-        margin: .5rem;
-        width: 4rem; height: 4rem;
-    }
-
     /* .footer */
     .footer__content {
         /* flex-direction: column; */
@@ -55,7 +49,7 @@
         text-align: center;
     }
     .aboutus__name {
-        text-align: left;
+        text-align: center;
     }
     .footer__map {
         height: 20rem;
@@ -69,7 +63,7 @@
 
     /* .reviews */
     .reviews__item {
-        width: 45%;
+        width: 60%;
     }
 }
 
@@ -108,15 +102,6 @@
     }
     .header__content {
         padding: 1.5rem 0;
-    }
-
-    /* .mini-card */
-    .mini-card {
-        padding: .3rem;
-        width: 2rem; height: 2rem;
-    }
-    .mini-card__image {
-        padding: .5rem;
     }
 
     /* .export */
