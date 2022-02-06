@@ -24,15 +24,21 @@ function sendAjaxForm(form, url) {
 }
 
 $(document).ready(function () {
+
     const swiper = new Swiper('#productsCarousel', {
         speed: 400,
         spaceBetween: 30,
         slidesPerView: 1,
         centeredSlides: true,
         loop: true,
+        autoHeight: true,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: "#productsCarousel .swiper-button-next",
+          prevEl: "#productsCarousel .swiper-button-prev",
         },
     });
 });
