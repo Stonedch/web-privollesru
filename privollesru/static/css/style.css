@@ -585,3 +585,25 @@ a {
     color: #51961B;
 }
 
+/* .createdby */
+.createdby {
+    width: 100%;
+    background-color: #212121;
+}
+
+.createdby__wrapper {
+    padding: .5rem 0 !important;
+    display: flex;
+    justify-content: center;
+}
+
+.createdby__span {
+    display: flex;
+    color: #FAFAFA;
+}
+
+.createdby__link {
+    margin-left: .3rem;
+    color: #FFF;
+}
+
