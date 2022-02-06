@@ -45,6 +45,8 @@
 
         {% include 'includes/message.html' %}
 
+        {% include 'includes/feedback-form.html' with hidden=True extra_css='form_fancybox' id='fancyboxFeedbackForm' subtitle='Оставьте заявку в наш Экспортный отдел!<br>Узнайте стоимость доставки до Вашей страны!' title='Мы заинтересованы в сотрудничестве с Вами!' %}
+
         {% block content %}{% endblock %}
 
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>

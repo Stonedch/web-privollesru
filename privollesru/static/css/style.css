@@ -288,6 +288,10 @@ a {
     margin: .2rem 0;
 }
 
+.form_fancybox {
+  max-width: 25rem;
+}
+
 .form__title {
     font-weight: 700;
     font-size: 1.5rem;

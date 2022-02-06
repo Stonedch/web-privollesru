@@ -1,3 +1,10 @@
+function showFeedbackForm() {
+    Fancybox.show([{
+        src: "#fancyboxFeedbackForm",
+        preload: true,
+    }]);
+}
+
 function showMessage(message) {
     $('#message #messageContent').text(message);
     Fancybox.show([{
@@ -24,7 +31,6 @@ function sendAjaxForm(form, url) {
 }
 
 $(document).ready(function () {
-
     const swiper = new Swiper('#productsCarousel', {
         speed: 400,
         spaceBetween: 30,
