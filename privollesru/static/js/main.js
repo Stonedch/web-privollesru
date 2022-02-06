@@ -31,6 +31,10 @@ function sendAjaxForm(form, url) {
 }
 
 $(document).ready(function () {
+    $('#footerFeedbackForm #phoneNumber').mask("+7 (999) 999-99-99");
+    $('#exportFeedbackForm #phoneNumber').mask("+7 (999) 999-99-99");
+    $('#fancyboxFeedbackForm #phoneNumber').mask("+7 (999) 999-99-99");
+
     const swiper = new Swiper('#productsCarousel', {
         speed: 400,
         spaceBetween: 30,
