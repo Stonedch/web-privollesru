@@ -4,11 +4,11 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-DEBUG = os.getenv('DJANGO_DEBUG', True).lower() in ('true', 't', 'y', '1')
+DEBUG = os.getenv('DJANGO_DEBUG', 'true').lower() in ('true', 't', 'y', '1')
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'ac-le5bg%m@jw2o*=@mv8&jo!f*kv7drbm@$32ir8u7+)s)4^f')
 
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', 'localhost 127.0.0.1 [::1]').split(' ')
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(' ')
 
 INSTALLED_APPS = [
     'home',
