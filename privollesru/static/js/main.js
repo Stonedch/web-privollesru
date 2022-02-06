@@ -35,9 +35,9 @@ $(document).ready(function () {
     $('#exportFeedbackForm #phoneNumber').mask("+7 (999) 999-99-99");
     $('#fancyboxFeedbackForm #phoneNumber').mask("+7 (999) 999-99-99");
 
-    const swiper = new Swiper('#productsCarousel', {
+    const productsCarousel = new Swiper('#productsCarousel', {
         speed: 400,
-        spaceBetween: 30,
+        spaceBetween: 10,
         slidesPerView: 1,
         centeredSlides: true,
         loop: true,
@@ -49,6 +49,18 @@ $(document).ready(function () {
         navigation: {
           nextEl: "#productsCarousel .swiper-button-next",
           prevEl: "#productsCarousel .swiper-button-prev",
+        },
+    });
+
+    const clientsCarousel = new Swiper('#clientsCarousel', {
+        speed: 400,
+        spaceBetween: 30,
+        slidesPerView: 5,
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
         },
     });
 });
