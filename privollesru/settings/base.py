@@ -12,6 +12,7 @@ ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS', '*').split(' ')
 
 INSTALLED_APPS = [
     'home',
+    'feedback',
     'search',
 
     'wagtail.contrib.forms',
@@ -28,6 +29,8 @@ INSTALLED_APPS = [
 
     'modelcluster',
     'taggit',
+
+    'rest_framework',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -141,4 +144,18 @@ WAGTAILSEARCH_BACKENDS = {
 BASE_URL = 'http://example.com'
 
 EMAIL_BACKEND = os.getenv('DJANGO_EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
+
+EMAIL_HOST = os.getenv('DJANGO_EMAIL_HOST', '')
+
+EMAIL_PORT = os.getenv('DJANGO_EMAIL_PORT', '')
+
+EMAIL_HOST_USER = os.getenv('DJANGO_EMAIL_HOST_USER', '')
+
+EMAIL_HOST_PASSWORD = os.getenv('DJANGO_EMAIL_HOST_PASSWORD', '')
+
+EMAIL_USE_TLS = os.getenv('DJANGO_EMAIL_USE_TLS', 'False').lower() in ('true', '1', 't', 'y')
+
+EMAIL_USE_SSL = os.getenv('DJANGO_EMAIL_USE_SSL', 'False').lower() in ('true', '1', 't', 'y')
+
+RECIPIENT_LIST = os.getenv('DJANGO_RECIPIENT_LIST', '').split(' ')
 

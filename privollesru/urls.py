@@ -8,6 +8,7 @@ from wagtail.core import urls as wagtail_urls
 from wagtail.documents import urls as wagtaildocs_urls
 
 from search import views as search_views
+from feedback import api as feedback_api
 
 urlpatterns = [
     path('django-admin/', admin.site.urls),
@@ -26,9 +27,15 @@ if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns = urlpatterns + [
-    path('', include(wagtail_urls)),
+    path('api/', include([
+        path('v1/', include([
+            path('', include(feedback_api.router.urls), name='feedback'),
+        ]), name='v1'),
+    ]), name='api'),
 
     path('robots.txt/', TemplateView.as_view(template_name='robots.txt', content_type='text/plain')),
     path('sitemap.xml/', TemplateView.as_view(template_name='sitemap.xml', content_type='text/plain')),
+
+    path('', include(wagtail_urls)),
 ]
 
