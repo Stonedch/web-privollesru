@@ -42,10 +42,6 @@ $(document).ready(function () {
         centeredSlides: true,
         loop: true,
         autoHeight: true,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-        },
         navigation: {
           nextEl: "#productsCarousel .swiper-button-next",
           prevEl: "#productsCarousel .swiper-button-prev",
