@@ -18,13 +18,13 @@ a {
 
 /* .brand */
 .brand {
-    height: 8rem;
+    height: 10rem;
     display: flex;
     align-items: center;
 }
 
 .brand:hover .brand__logo {
-    width: 8rem;
+    width: 10rem;
 }
 
 .brand:hover .brand__corp {
@@ -32,7 +32,7 @@ a {
 }
 
 .brand__logo {
-    width: 7rem;
+    width: 8rem;
     transition: 1s;
 }
 
@@ -68,6 +68,7 @@ a {
 
 .corp-info__bottom {
     padding-top: 0.3rem;
+    margin-left: auto;
 }
 .corp-info__phone-number {
     text-decoration: none;
@@ -92,9 +93,10 @@ a {
     content: "";
     z-index: -1;
     background-image: url(../images/header-background.jpg);
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: saturate(.7);
+    filter: brightness(.6);
 }
 
 .header__top {
@@ -140,10 +142,10 @@ a {
 }
 
 .header__column {
+    margin-left: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    text-align: end;
 }
 
 .header__info {
@@ -169,6 +171,11 @@ a {
 .button_center {
     margin-left: auto;
     margin-right: auto;
+}
+
+.button_end {
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .button_opacity {

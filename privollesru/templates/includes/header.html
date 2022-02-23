@@ -1,19 +1,10 @@
 {% load static %}
 
 <header class="header">
-    <div class="background-images">
-        <div class="background-images__image-wrapper background-images__image-wrapper_right-0 background-images__image-wrapper_top-30perc">
-            <img src="{% static 'images/branch.png' %}" alt="image" class="background-images__image">
-        </div>
-        <div class="background-images__image-wrapper background-images__image-wrapper_left-0 background-images__image-wrapper_rotate-180deg background-images__image-wrapper_top-25perc">
-            <img src="{% static 'images/branch.png' %}" alt="image" class="background-images__image">
-        </div>
-    </div>
     <div class="content">
         <div class="header__top">
             <a class="brand" href="/">
-                <img class="brand__logo" src="{% static 'images/brand/mini.svg' %}" alt="logo">
-                <h1 class="brand__corp">Приволжская Лесная Компания НН</h1>
+                <img class="brand__logo" src="{% static 'images/brand/logotype-white.svg' %}" alt="logo">
             </a>
             <div class="corp-info">
                 <div class="corp-info__top">
@@ -29,7 +20,7 @@
             <div class="header__column">
                 <span class="header__title">Поставляем качественный лес и пиломатериалы</span>
                 <span class="header__subtitle header__subtitle_mv-1rem">В любых количествах точно в срок по РФ и на экспорт.</span>
-                <div class="header__link button button_center button_opacity" onclick="showFeedbackForm()">Каталог продукции</div>
+                <div class="header__link button button_end button_opacity" onclick="showFeedbackForm()">Каталог продукции</div>
                 <div class="header__info corp-info">
                     <div class="corp-info__top">
                         <a class="corp-info__phone-number" href="tel:+79308198508">+7 (987) 757-57-18</a>

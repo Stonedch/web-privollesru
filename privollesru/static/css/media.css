@@ -76,7 +76,7 @@
 
     /* .brand */
     .brand {
-        height: 6rem;
+        height: 8rem;
     }
     .brand__corp {
         /*width: auto;*/
@@ -103,7 +103,9 @@
     .header__content {
         padding: 1.5rem 0;
     }
-
+    .header .button_end {
+        margin-right: auto;
+    }
     /* .export */
     .export__content {
         flex-direction: column;
