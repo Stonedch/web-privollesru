@@ -561,7 +561,7 @@ a {
     width: 33.3333%; height: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
 }
 
 .about.about_background .about__column > *:nth-child(n + 2) {
@@ -574,6 +574,7 @@ a {
 
 .about.about_background .about__column.about__column_end {
     align-items: end;
+    justify-content: end;
     text-align: end;
 }
 
