@@ -55,6 +55,20 @@
         height: 20rem;
     }
 
+    /* .about */
+    .about.about_background .about__avatar-wrapper {
+        display: none;
+    }
+    .about.about_background .about__avtar-wrapper_circle {
+        display: block;
+    }
+    .about.about_background .about__column {
+        width: 100%;
+    }
+    .about.about_background .about__column.about__column_end {
+        display: none;
+    }
+
     /* .form */
     .form {
         display: flex;
@@ -142,3 +156,4 @@
         text-align: center;
     }
 }
+
