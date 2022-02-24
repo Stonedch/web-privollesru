@@ -77,7 +77,7 @@
 
     /* .reviews */
     .reviews__item {
-        width: 60%;
+        width: calc(50% - .5rem * 2);
     }
 }
 
