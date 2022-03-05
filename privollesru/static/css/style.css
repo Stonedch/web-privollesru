@@ -328,7 +328,8 @@ a {
 }
 
 .form__input {
-    max-width: 20rem;
+    min-width: 80%;
+    max-width: 100%;
     width: 20rem;
     padding: 1rem;
     font-family: 'Roboto';
