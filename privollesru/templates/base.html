@@ -19,8 +19,8 @@
 
         <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
         <link rel="shortcut icon" href="{% static 'favicon256.ico' %}" type="image/x-icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+        <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/fancybox.css' %}">
         <link rel="stylesheet" href="{% static 'fonts/roboto/fonts.css' %}">
         <link rel="stylesheet" href="{% static 'css/normilize.min.css' %}">
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -52,9 +52,9 @@
         {% include 'includes/createdby.html' %}
 
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+        <script src="{% static 'js/fancybox.umd.js' %}"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="{% static 'js/jquery.maskedinput.min.js' %}" integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 
         {% block extra_js %}{% endblock %}
