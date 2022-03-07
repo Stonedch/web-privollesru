@@ -1,17 +1,39 @@
 {% load static %}
 
-    <div class="export content">
-        <div class="infoblock">
-            <h2 class="infoblock__title">Экспорт</h2>
-            <div class="infoblock__line"></div>
-        </div>
+<div class="export export_background_dark">
+    <div class="content">
         <div class="export__content">
-            <div class="export__image">
-                <img class="image" src="{% static 'images/airplane.jpg'%}">
-            </div>
-            <div class="export__form">
-                {% include 'includes/feedback-form.html' with id='exportFeedbackForm' title='Доставим в Вашу страну!' subtitle='Оставьте заявку в наш Экспортный отдел!<br>Узнайте стоимость доставки до Вашей страны!' %}
+            <div class="export__icon-list">
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-location-dot icon-wrapper__icon"></i>
+                    <h3 class="icon-wrapper__title">Наш офис</h3>
+                    <span class="icon-wrapper__span">г. Бор, Стеклозаводское ш., д. 3, к. 1, оф. 307</span>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-phone icon-wrapper__icon"></i>
+                    <h3 class="icon-wrapper__title">Номера телефона</h3>
+                    <a class="icon-wrapper__span" href="tel: +79877575718">+7 (987) 757-57-18</a>
+                    <a class="icon-wrapper__span" href="tel: +79103866661">+7 (910) 386-66-61</a>
+                </div>
+                <div class="icon-wrapper">
+                    <i class="fa-solid fa-envelope icon-wrapper__icon"></i>
+                    <h3 class="icon-wrapper__title">Email</h3>
+                    <a class="icon-wrapper__span icon-wrapper__span_email" href="mailto:lst-nn@bk.ru">lst-nn@bk.ru</a>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="export export_with_map">
+        <div class="export__map">
+            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1d45a927e0086598e25086383b2ba3fb3da2db8a65b09edd71198f789b1e0522&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+        <div class="content export__content">
+            <div class="export__form">
+                {% include 'includes/feedback-form.html' with show_description_input=True id='footerFeedbackForm' subtitle='Мы заинтересованы в сотрудничестве с Вами! Отправьте заявку на интересующую Вас продукцию нашей компании и в течении 15 минут с Вами свяжется наш менеджер.' title='Мы заинтересованы в сотрудничестве с Вами!' %}
+            </div>
+        </div>
+    </div>
+</div>
 

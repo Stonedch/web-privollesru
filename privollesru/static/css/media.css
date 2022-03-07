@@ -155,5 +155,46 @@
     .form {
         text-align: center;
     }
+
+    /* .export */
+    .export.export_with_map {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .export .export__map {
+        position: static;
+        height: 20rem;
+    }
+
+    .export .export__form {
+        margin-top: 0;
+        margin-bottom: 0;
+        opacity: 1;
+    }
+
+    .export .export__icon-list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .export .export__icon-list > * {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .export .export__icon-list > *:last-child {
+        margin-bottom: 0;
+    }
+
+    /* .icon-wrapper */
+    .icon-wrapper {
+        padding: 2rem 1rem;
+    }
+
+    .icon-wrapper .icon-wrapper__title {
+        margin-bottom: 1rem;
+    }
 }
 
