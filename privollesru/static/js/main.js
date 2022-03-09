@@ -35,6 +35,22 @@ $(document).ready(function () {
     $('#exportFeedbackForm #phoneNumber').mask("+7 (999) 999-99-99");
     $('#fancyboxFeedbackForm #phoneNumber').mask("+7 (999) 999-99-99");
 
+    $('.resp-menu .resp-menu__header').each(function (key, value) {
+        $(value).click(function () {
+            if ($(this).parent().find('.resp-menu__content').hasClass('resp-menu__content_hidden')) {
+                $(this).parent().find('.resp-menu__icon').css({transform: 'rotate(45deg)'});
+                $(this).parent().find('.resp-menu__content').fadeIn(function () {
+                    $(this).parent().find('.resp-menu__content').removeClass('resp-menu__content_hidden');
+                });
+            } else {
+                $(this).parent().find('.resp-menu__icon').css({transform: 'rotate(0)'});
+                $(this).parent().find('.resp-menu__content').fadeOut(function () {
+                    $(this).parent().find('.resp-menu__content').addClass('resp-menu__content_hidden');
+                });
+            }
+        });
+    });
+
     const productsCarousel = new Swiper('#productsCarousel', {
         speed: 400,
         spaceBetween: 10,
@@ -70,4 +86,3 @@ $(document).ready(function () {
         },
     });
 });
-
