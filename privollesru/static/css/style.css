@@ -420,6 +420,7 @@ a {
 }
 
 .form__input {
+    min-width: 80%;
     max-width: 100%;
     padding: 1rem;
     font-family: 'Roboto';
