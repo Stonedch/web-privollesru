@@ -85,4 +85,15 @@ $(document).ready(function () {
             },
         },
     });
+
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+            center: [56.32096154775088, 44.00040879833978],
+            zoom: 11,
+            controls: [''],
+        });
+        multiRoute.editor.stop();
+        myMap.geoObjects.add(multiRoute);
+    });
 });
+
