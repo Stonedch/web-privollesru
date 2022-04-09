@@ -6,7 +6,7 @@
 
     /* .header */
     .header {
-        height: 30rem;
+        height: 40rem;
     }
     .header__image {
         display: none;
@@ -15,6 +15,9 @@
         width: 100%;
         align-items: center;
         text-align: center;
+    }
+    .header .header__link.button {
+        margin-right: auto;
     }
 
     /* .background-images */
