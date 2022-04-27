@@ -1,9 +1,10 @@
 import React from 'react';
+import { Header } from 'components/Header';
 
 function HomeView() {
     return (
         <>
-            <h1>Home</h1>
+            <Header />
         </>
     );
 }
