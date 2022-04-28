@@ -3,6 +3,7 @@
 .header {
     position: relative;
     height: 35rem;
+    max-height: 100vh;
     color: #FAFAFA;
 
     &::after {
@@ -46,7 +47,7 @@
             height: 100%;
             flex-direction: column;
             justify-content: center;
-            align-items: end;
+            align-items: flex-end;
 
             & > * {
                 margin-bottom: 1rem;
