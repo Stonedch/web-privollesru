@@ -1,0 +1,35 @@
+@import 'index.scss';
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 19rem;
+
+    & > .top {
+        margin-bottom: .3rem;
+        border-bottom: #FAFAFA .1rem solid;
+        padding-bottom: .4rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & a {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #FAFAFA;
+            text-decoration: none;
+            transition: color 1s;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    & > .bottom {
+        margin-left: auto;
+    }
+}
+

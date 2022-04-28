@@ -1,0 +1,2 @@
+export { CompanyInfo } from './CompanyInfo';
+
