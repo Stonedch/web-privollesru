@@ -1,0 +1,22 @@
+@import 'index.scss';
+
+.createdby {
+    width: 100%;
+    padding: .5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #212121;
+
+    & a {
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        color: #FAFAFA;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
