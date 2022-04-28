@@ -13,6 +13,13 @@ code {
 .content {
     max-width: 1140px;
     margin: 0 auto;
+
+    @media screen and (max-width: 1279px) {
+        width: 800px;
+    }
+    @media screen and (max-width: 899px) {
+        width: calc(100% - 2rem);
+    }
 }
 
 .screen {
