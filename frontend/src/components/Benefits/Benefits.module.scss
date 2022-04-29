@@ -4,12 +4,20 @@
     & > .content {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
         flex-wrap: wrap;
 
         & > * {
             flex: 0 1 25%;
             max-width: 25%;
+
+            @media screen and (max-width: 899px) {
+                flex: 0 1 50%;
+                max-width: 50%;
+                &:nth-child(n + 3) {
+                    margin-top: 1rem;
+                }
+            }
         }
     }
 }
