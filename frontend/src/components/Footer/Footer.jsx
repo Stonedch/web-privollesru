@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.scss';
-import { CreatedBy } from 'components/CreatedBy';
+import { CreatedBy } from './CreatedBy';
 
 function Footer() {
     return (
