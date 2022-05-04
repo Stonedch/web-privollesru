@@ -1,0 +1,56 @@
+@import 'index.scss';
+
+.square {
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: #FAFAFA;
+    transition: transform .5s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+
+        & > .icon {
+            color: #333;
+        }
+    }
+
+    & > .icon {
+        font-size: 5rem;
+        margin: 0;
+        margin-bottom: .5rem;
+        color: #778075;
+        transition: color .5s ease-in-out;
+    }
+
+    & > .title {
+        margin: 0;
+        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    & > a, p {
+        margin: 0;
+        margin-bottom: .5rem;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: #333;
+        text-align: center;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    & > a {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

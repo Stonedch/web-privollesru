@@ -1,0 +1,17 @@
+@import 'index.scss';
+
+.contacts {
+    background: #333;
+
+    & > .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & > * {
+            max-width: 25%;
+            flex: 0 1 25%;
+            align-self: stretch;
+        }
+    }
+}
