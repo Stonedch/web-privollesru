@@ -10,6 +10,12 @@ code {
         monospace;
 }
 
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .content {
     max-width: 1140px;
     margin: 0 auto;
