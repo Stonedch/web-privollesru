@@ -21,6 +21,7 @@ function sendAjaxForm(form, url) {
         data: $(form).serialize(),
         statusCode: {
             201: function (response) {
+                Fancybox.close();
                 showMessage('Заявка была отправлена!');
             },
             400: function (response) {
