@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './Clients.module.scss';
+import { Title } from 'components/Title';
 import 'swiper/css';
-import 'swiper/css/autoplay';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
-import { Title } from 'components/Title';
-
 import slide00 from 'assets/our-clients/client01.png';
 import slide01 from 'assets/our-clients/client02.png';
 import slide02 from 'assets/our-clients/client03.png';
@@ -35,6 +33,10 @@ function Clients() {
                         disableOnInteractive: false
                     }}
                     modules={[Autoplay]}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false
+                    }}
                 >
                     <SwiperSlide className={styles.slide}>
                         <img src={slide00} />
