@@ -6,7 +6,9 @@ function Button(props) {
 
     return (
         <div
-            className={[styles.button, opacity ? styles.opacity : null].join(' ')}
+            className={[styles.button, opacity ? styles.opacity : null].join(
+                ' '
+            )}
             onClick={onClick}
         >
             {children}
@@ -15,4 +17,3 @@ function Button(props) {
 }
 
 export { Button };
-

@@ -7,10 +7,9 @@ function Brand(props) {
 
     return (
         <a className={styles.brand} href={href}>
-            <img src={logotype} alt={ alt ? alt : 'logotype' } />
+            <img src={logotype} alt={alt ? alt : 'logotype'} />
         </a>
     );
 }
 
 export { Brand };
-

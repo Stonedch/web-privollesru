@@ -16,4 +16,3 @@ function CompanyInfo() {
 }
 
 export { CompanyInfo };
-

@@ -20,7 +20,10 @@ function Clients() {
     return (
         <div className={`${styles.clients} ${styles.screen}`}>
             <div className={styles.content}>
-                <Title title='Наши клиенты' subtitle='За 10 лет мы поставили лес и пиломатериалы более, чем 100 компаниям' />
+                <Title
+                    title='Наши клиенты'
+                    subtitle='За 10 лет мы поставили лес и пиломатериалы более, чем 100 компаниям'
+                />
                 <Swiper
                     speed={400}
                     spaceBetween={10}
@@ -30,12 +33,12 @@ function Clients() {
                     autoHeight={true}
                     navigation={{
                         delay: 300,
-                        disableOnInteractive: false
+                        disableOnInteractive: false,
                     }}
                     modules={[Autoplay]}
                     autoplay={{
                         delay: 3000,
-                        disableOnInteraction: false
+                        disableOnInteraction: false,
                     }}
                 >
                     <SwiperSlide className={styles.slide}>

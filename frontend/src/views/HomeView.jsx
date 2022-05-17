@@ -18,4 +18,3 @@ function HomeView() {
 }
 
 export { HomeView };
-
