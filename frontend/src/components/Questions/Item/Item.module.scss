@@ -1,0 +1,78 @@
+@import 'index.scss';
+
+.item {
+    border-bottom: 1px solid #E3E3E3;
+
+    &.active {
+        & .header {
+            & .button {
+                transform: rotate(45deg);
+            }
+        }
+        & .body {
+            display: block;
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    & .header {
+        padding: 27px 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        & .title {
+            font-size: 20px;
+            font-family: 600;
+        }
+
+        & .button {
+            position: relative;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: .15rem solid #60b122;
+            border-radius: 50%;
+            transition: transform .3s ease-in-out;
+
+            &::before,
+            &::after {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                content: '';
+                width: 80%;
+                height: .13rem;
+                background: #60b122;
+                border-radius: .5rem;
+                margin: auto;
+            }
+
+            &::after {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    & .body {
+        display: none;
+        padding: 13.5px 50px 27px 50px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all .3s ease-in-out;
+
+        & p {
+            margin: 0;
+            margin-top: 0px;
+            margin-top: 21px;
+            padding-right: 1rem;
+            font-size: 18px;
+            font-weight: 300;
+            color: #000;
+            line-height: 25px;
+        }
+    }
+}
