@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Form.module.scss';
 import { Button } from 'components/Button';
 import { Label } from 'components/Label';
 import { Input } from 'components/Input';
 
 function Form(props) {
-    const { title, subtitle, className, children } = props;
+    const { title, subtitle, className, buttonText, children } = props;
 
     const form = children ? (
         children
@@ -38,7 +39,11 @@ function Form(props) {
                 <span className={styles.subtitle}>{subtitle}</span>
             ) : null}
             {form}
-            <Button>Отправить заявку</Button>
+            <Button>{buttonText ? buttonText : 'Отправить заявку'}</Button>
+            <Link className={styles.privacy} to='/privacy/'>
+                Нажимая кнопку «{buttonText ? buttonText : 'Отправить заявку'}»
+                вы соглашаетесь с политикой обработки персональных данных
+            </Link>
         </form>
     );
 }
