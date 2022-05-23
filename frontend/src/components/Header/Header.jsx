@@ -7,6 +7,7 @@ import { ModalWindow } from 'components/ModalWindow';
 import { Form } from 'components/Form';
 import { Label } from 'components/Label';
 import { Input } from 'components/Input';
+import { Nav } from './Nav';
 
 const Header = () => {
     const [isOpenWindow, setIsOpenWindow] = useState(false);
@@ -20,7 +21,10 @@ const Header = () => {
             <div className={styles.content}>
                 <div className={styles.top}>
                     <Brand href='/' />
-                    <CompanyInfo />
+                    <div className={styles.right}>
+                        <Nav />
+                        <CompanyInfo className={styles.info} />
+                    </div>
                 </div>
                 <div className={styles.bottom}>
                     <h1 className={styles.title}>
