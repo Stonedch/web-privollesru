@@ -5,6 +5,8 @@ import { CompanyInfo } from 'components/CompanyInfo';
 import { Button } from 'components/Button';
 import { ModalWindow } from 'components/ModalWindow';
 import { Form } from 'components/Form';
+import { Label } from 'components/Label';
+import { Input } from 'components/Input';
 
 const Header = () => {
     const [isOpenWindow, setIsOpenWindow] = useState(false);
@@ -34,7 +36,25 @@ const Header = () => {
                         Каталог продукции
                     </Button>
                     <ModalWindow isOpen={isOpenWindow} onClose={toggleWindow}>
-                        <Form />
+                        <Form
+                            title='Мы заинтересованы в сотрудничестве с Вами!'
+                            subtitle='Оставьте заявку в наш Экспортный отдел! Узнайте стоимость доставки до Вашей страны!'
+                        >
+                            <Label title='Ваше имя'>
+                                <Input
+                                    type='text'
+                                    name='name'
+                                    placeholder='Иван'
+                                />
+                            </Label>
+                            <Label title='Введите номер телефона'>
+                                <Input
+                                    type='tel'
+                                    name='phone_number'
+                                    placeholder='+7 (___) ___ __ __'
+                                />
+                            </Label>
+                        </Form>
                     </ModalWindow>
                 </div>
             </div>

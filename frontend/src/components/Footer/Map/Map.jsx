@@ -16,7 +16,11 @@ const Map = () => {
         <div className={styles.map}>
             <div className={styles.content}>
                 <div className={styles.container}>
-                    <Form className={styles.form} />
+                    <Form
+                        title='Мы заинтересованы в сотрудничестве с Вами!'
+                        subtitle='Мы заинтересованы в сотрудничестве с Вами! Отправьте заявку на интересующую Вас продукцию нашей компании и в течении 15 минут с Вами свяжется наш менеджер.'
+                        className={styles.form}
+                    />
                 </div>
             </div>
             <YMaps>

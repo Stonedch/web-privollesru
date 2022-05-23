@@ -5,27 +5,21 @@ import { Label } from 'components/Label';
 import { Input } from 'components/Input';
 
 function Form(props) {
-    const { className } = props;
+    const { title, subtitle, className, children } = props;
 
-    return (
-        <form className={`${styles.form} ${className}`} method='POST' action=''>
-            <h3 className={styles.title}>
-                Мы заинтересованы в сотрудничестве с Вами!
-            </h3>
-            <span className={styles.subtitle}>
-                Мы заинтересованы в сотрудничестве с Вами! Отправьте заявку на
-                интересующую Вас продукцию нашей компании и в течении 15 минут с
-                Вами свяжется наш менеджер.
-            </span>
+    const form = children ? (
+        children
+    ) : (
+        <>
+            <Label title='Ваше имя'>
+                <Input type='text' name='name' placeholder='Иван' />
+            </Label>
             <Label title='Введите номер телефона'>
                 <Input
                     type='tel'
                     name='phone_number'
                     placeholder='+7 (___) ___ __ __'
                 />
-            </Label>
-            <Label title='Ваше имя'>
-                <Input type='text' name='name' placeholder='Иван' />
             </Label>
             <Label title='Наименование, размер и вид продукции'>
                 <Input
@@ -34,6 +28,16 @@ function Form(props) {
                     placeholder='Кедр, имитация бруса 19х135'
                 />
             </Label>
+        </>
+    );
+
+    return (
+        <form className={`${styles.form} ${className}`} method='POST' action=''>
+            {title ? <h3 className={styles.title}>{title}</h3> : null}
+            {subtitle ? (
+                <span className={styles.subtitle}>{subtitle}</span>
+            ) : null}
+            {form}
             <Button>Отправить заявку</Button>
         </form>
     );
