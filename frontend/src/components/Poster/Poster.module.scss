@@ -100,16 +100,15 @@
         }
     }
 
-    & a,
-    & h3,
-    & h2 {
+    & .phone,
+    & .title {
         font-size: 2rem;
         font-weight: 700;
         line-height: 1.2em;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
     }
 
-    & a {
+    & .phone {
         text-decoration: none;
         color: #fafafa;
         position: relative;
@@ -136,7 +135,7 @@
         }
     }
 
-    & p {
+    & .par {
         font-size: 1.2rem;
         font-weight: 400;
         line-height: 1.2em;
