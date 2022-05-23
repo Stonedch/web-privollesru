@@ -5,6 +5,7 @@ import { Benefits } from 'components/Benefits';
 import { Clients } from 'components/Clients';
 import { Questions } from 'components/Questions';
 import { AboutUs } from 'components/AboutUs';
+import { Poster } from 'components/Poster';
 
 function HomeView() {
     return (
@@ -13,6 +14,7 @@ function HomeView() {
             <Benefits />
             <Clients />
             <AboutUs />
+            <Poster />
             <Questions />
             <Footer />
         </>
