@@ -9,7 +9,6 @@ const Footer = () => {
         <footer className={styles.footer}>
             <Contacts />
             <Map />
-            testing
             <CreatedBy />
         </footer>
     );

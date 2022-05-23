@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Map.module.scss';
 import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
+import { Form } from 'components/Form';
 
 const Map = () => {
     const mapData = {
@@ -12,13 +13,20 @@ const Map = () => {
     const points = [[56.349375, 44.080403]];
 
     return (
-        <YMaps className={styles.container}>
-            <YMap defaultState={mapData} width={'100%'} height={'80vh'}>
-                {points
-                    ? points.map((point) => <Placemark geometry={point} />)
-                    : null}
-            </YMap>
-        </YMaps>
+        <div className={styles.map}>
+            <div className={styles.content}>
+                <div className={styles.container}>
+                    <Form className={styles.form} />
+                </div>
+            </div>
+            <YMaps>
+                <YMap defaultState={mapData} width={'100%'} height={'50rem'}>
+                    {points
+                        ? points.map((point) => <Placemark geometry={point} />)
+                        : null}
+                </YMap>
+            </YMaps>
+        </div>
     );
 };
 

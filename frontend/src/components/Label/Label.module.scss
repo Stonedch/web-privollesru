@@ -1,0 +1,13 @@
+@import 'index.scss';
+
+.label {
+    display: flex;
+    flex-direction: column;
+
+    & span {
+        max-width: 20rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+}

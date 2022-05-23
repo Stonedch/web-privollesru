@@ -1,0 +1,25 @@
+@import 'index.scss';
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        margin-top: 1.5rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    & .title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    & .subtitle {
+        margin-bottom: 0;
+        font-size: 1.2rem;
+    }
+}
