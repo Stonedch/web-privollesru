@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './Products.module.scss';
 import { Title } from 'components/Title';
 import { Item } from './Item';
@@ -6,13 +6,17 @@ import { ModalWindow } from 'components/ModalWindow';
 import { Form } from 'components/Form';
 import { Label } from 'components/Label';
 import { Input } from 'components/Input';
-import 'swiper/css';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import card00 from 'assets/products/card00.jpg';
 
 const Products = () => {
     const [isOpenWindow, setIsOpenWindow] = useState(false);
+    const navigationPrevRef = React.useRef(null);
+    const navigationNextRef = React.useRef(null);
 
     const toggleWindow = () => {
         setIsOpenWindow(!isOpenWindow);
@@ -29,6 +33,11 @@ const Products = () => {
                     centeredSlides={true}
                     loop={true}
                     autoHeight={true}
+                    modules={[Navigation]}
+                    navigation={{
+                        prevEl: navigationPrevRef.current,
+                        nextEl: navigationNextRef.current,
+                    }}
                 >
                     <SwiperSlide>
                         <Item
@@ -50,6 +59,14 @@ const Products = () => {
                             }}
                         />
                     </SwiperSlide>
+                    <div
+                        className={`${styles.button} ${styles.prev}`}
+                        ref={navigationPrevRef}
+                    />
+                    <div
+                        className={`${styles.button} ${styles.next}`}
+                        ref={navigationNextRef}
+                    />
                 </Swiper>
             </div>
             <ModalWindow isOpen={isOpenWindow} onClose={toggleWindow}>

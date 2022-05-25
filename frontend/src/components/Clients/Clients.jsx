@@ -31,10 +31,6 @@ function Clients() {
                     centeredSlides={true}
                     loop={true}
                     autoHeight={true}
-                    navigation={{
-                        delay: 300,
-                        disableOnInteractive: false,
-                    }}
                     modules={[Autoplay]}
                     autoplay={{
                         delay: 3000,

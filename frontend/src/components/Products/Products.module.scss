@@ -1,1 +1,58 @@
 @import 'index.scss';
+
+.button {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    margin: auto;
+    content: '';
+    font-size: 2.5rem;
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.75;
+    }
+
+    &::before,
+    &::after {
+        width: 50%;
+        height: 0.2rem;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 2rem;
+        content: '';
+        background: #60b122;
+    }
+
+    &.prev {
+        left: 0;
+
+        &::before {
+            transform: translate(0, 0.16em) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(0, -0.16em) rotate(-45deg);
+        }
+    }
+
+    &.next {
+        right: 0;
+
+        &::before {
+            transform: translate(0, 0.16em) rotate(-45deg);
+        }
+
+        &::after {
+            transform: translate(0, -0.16em) rotate(45deg);
+        }
+    }
+}
