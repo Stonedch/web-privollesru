@@ -1,0 +1,46 @@
+@import 'index.scss';
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:hover {
+        & .icon {
+            filter: drop-shadow(0 .3rem .3rem rgba(#333, .75));
+        }
+    }
+
+    & .icon {
+        width: 5rem;
+        height: 5rem;
+        padding: .5rem;
+        border: .2rem solid #333;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        color: #333;
+        filter: drop-shadow(0 .3rem .3rem rgba(#333, .25));
+        transition: filter .5s ease-in-out;
+    }
+
+    & .title {
+        max-width: 80%;
+        margin: 0 auto;
+        margin-top: .5rem;
+        font-size: 1.25rem;
+        color: #212121;
+    }
+
+    & .subtitle {
+        max-width: 80%;
+        margin: 0 auto;
+        margin-top: .5rem;
+        font-size: 1rem;
+        color: #333;
+    }
+}

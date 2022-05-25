@@ -1,0 +1,39 @@
+@import 'index.scss';
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        margin-top: 1.2rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    & .title {
+        margin: 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+        line-height: 1.25em;
+    }
+
+    & .subtitle {
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        line-height: 1.25em;
+    }
+
+    & .privacy {
+        margin: {
+            left: auto;
+            right: auto;
+        }
+        font-size: 0.75rem;
+        line-height: 1.5em;
+        color: #212121;
+        text-align: center;
+        max-width: 80%;
+    }
+}

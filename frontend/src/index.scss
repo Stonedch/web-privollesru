@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    max-width: 1140px;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1279px) {
+        width: 800px;
+    }
+    @media screen and (max-width: 899px) {
+        width: calc(100% - 2rem);
+    }
+}
+
+.screen {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: #60b122;
+}
