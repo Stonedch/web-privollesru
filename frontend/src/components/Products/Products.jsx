@@ -14,16 +14,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import card00 from 'assets/products/card00.jpg';
 
 const Products = () => {
+    const navigationPrevRef = useRef(null);
+    const navigationNextRef = useRef(null);
     const [isOpenWindow, setIsOpenWindow] = useState(false);
-    const navigationPrevRef = React.useRef(null);
-    const navigationNextRef = React.useRef(null);
 
     const toggleWindow = () => {
         setIsOpenWindow(!isOpenWindow);
     };
 
     return (
-        <div className={`${styles.clients} ${styles.screen}`}>
+        <div className={styles.screen}>
             <div className={styles.content}>
                 <Title title='Наша продукция' />
                 <Swiper
@@ -34,11 +34,28 @@ const Products = () => {
                     loop={true}
                     autoHeight={true}
                     modules={[Navigation]}
-                    navigation={{
-                        prevEl: navigationPrevRef.current,
-                        nextEl: navigationNextRef.current,
-                    }}
+                    navigation
                 >
+                    <SwiperSlide>
+                        <Item
+                            background={card00}
+                            title='Круглый лес'
+                            subtitle='ГОСТ 9463-88, Сорт 1-3, 19-50см. и выше'
+                            additional={[
+                                {
+                                    title: 'Хвойные породы',
+                                    desc: 'Сосна, ель, лиственница, кедр',
+                                },
+                                {
+                                    title: 'Лиственные породы',
+                                    desc: 'Осина, береза',
+                                },
+                            ]}
+                            buttonOnClick={() => {
+                                toggleWindow();
+                            }}
+                        />
+                    </SwiperSlide>
                     <SwiperSlide>
                         <Item
                             background={card00}

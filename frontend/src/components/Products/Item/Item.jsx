@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Item.module.scss';
-import { Title } from 'components/Title';
 import { Button } from 'components/Button';
 
 const Item = (props) => {
