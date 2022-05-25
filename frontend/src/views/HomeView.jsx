@@ -6,11 +6,13 @@ import { Clients } from 'components/Clients';
 import { Questions } from 'components/Questions';
 import { AboutUs } from 'components/AboutUs';
 import { Poster } from 'components/Poster';
+import { Products } from 'components/Products';
 
 function HomeView() {
     return (
         <>
             <Header />
+            <Products />
             <Benefits />
             <Clients />
             <AboutUs />
