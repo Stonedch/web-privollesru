@@ -27,7 +27,7 @@ function Clients() {
                 <Swiper
                     speed={400}
                     spaceBetween={10}
-                    slidesPerView={5}
+                    slidesPerView={1}
                     centeredSlides={true}
                     loop={true}
                     autoHeight={true}
@@ -35,6 +35,11 @@ function Clients() {
                     autoplay={{
                         delay: 3000,
                         disableOnInteraction: false,
+                    }}
+                    breakpoints={{
+                        799: {
+                            slidesPerView: 5,
+                        },
                     }}
                 >
                     <SwiperSlide className={styles.slide}>
