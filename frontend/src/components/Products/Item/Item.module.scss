@@ -37,7 +37,7 @@
         background: rgba(#313131, 0.75);
         padding: 1rem;
 
-        & > * {
+        > * {
             margin: 0;
             margin-top: 0.7rem;
 
@@ -49,11 +49,19 @@
         & .title {
             font-size: 1.5rem;
             font-weight: 700;
+
+            @media screen and (max-width: 899px) {
+                font-size: 1rem;
+            }
         }
 
         & .subtitle {
             font-size: 1rem;
             font-weight: 500;
+
+            @media screen and (max-width: 899px) {
+                text-align: center;
+            }
         }
 
         & .additional {
@@ -72,6 +80,10 @@
 
                 &:nth-child(n + 3) {
                     margin-top: 0.5rem;
+
+                    @media screen and (max-width: 899px) {
+                        margin-top: 1rem;
+                    }
                 }
 
                 & > * {
@@ -83,12 +95,47 @@
                     font-size: 1rem;
                     font-weight: 500;
                     border-bottom: 1px solid #fafafa;
+
+                    @media screen and (max-width: 899px) {
+                        font-size: 0.8rem;
+                    }
                 }
 
                 & .desc {
                     font-size: 1rem;
+
+                    @media screen and (max-width: 899px) {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                @media screen and (max-width: 899px) {
+                    margin-top: 0.5rem;
+
+                    &:first-child {
+                        margin-top: 0;
+                    }
                 }
             }
+
+            @media screen and (max-width: 899px) {
+                flex-direction: column;
+                align-items: center;
+                padding: 0.5rem;
+            }
         }
+
+        @media screen and (max-width: 899px) {
+            margin: 1rem;
+        }
+    }
+
+    @media screen and (max-width: 1279px) {
+        width: 85%;
+    }
+
+    @media screen and (max-width: 899px) {
+        width: 70%;
+        height: unset;
     }
 }
