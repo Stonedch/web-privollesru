@@ -24,7 +24,11 @@ const Map = () => {
                 </div>
             </div>
             <YMaps>
-                <YMap defaultState={mapData} width={'100%'} height={'50rem'}>
+                <YMap
+                    className={styles.ymap}
+                    defaultState={mapData}
+                    width={'100%'}
+                >
                     {points
                         ? points.map((point) => <Placemark geometry={point} />)
                         : null}

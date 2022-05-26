@@ -11,7 +11,12 @@
             }
         }
     }
+
     & p {
         line-height: 1.5em;
+
+        @media screen and (max-width: 899px) {
+            text-align: center;
+        }
     }
 }

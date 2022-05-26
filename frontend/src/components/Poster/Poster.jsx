@@ -35,9 +35,6 @@ const Poster = () => {
                         пределами!
                     </p>
                 </div>
-                <div className={styles.avatar}>
-                    <img src={avatar} alt='avatar' />
-                </div>
                 <div className={styles.column}>
                     <h3 className={styles.title}>Позвоните нам</h3>
                     <p className={styles.par}>
@@ -52,6 +49,9 @@ const Poster = () => {
                     <Button onClick={() => toggleWindow()} opacity={true}>
                         Заказать звонок
                     </Button>
+                </div>
+                <div className={styles.avatar}>
+                    <img src={avatar} alt='avatar' />
                 </div>
             </div>
             <ModalWindow isOpen={isOpenWindow} onClose={toggleWindow}>

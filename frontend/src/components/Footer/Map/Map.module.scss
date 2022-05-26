@@ -3,6 +3,11 @@
 .map {
     position: relative;
 
+    @media screen and (max-width: 899px) {
+        display: flex;
+        flex-direction: column;
+    }
+
     & .container {
         position: absolute;
         top: 0;
@@ -10,6 +15,10 @@
         z-index: 10;
         display: flex;
         align-items: center;
+
+        @media screen and (max-width: 899px) {
+            position: static;
+        }
     }
 
     & .form {
@@ -24,6 +33,21 @@
 
         &:hover {
             opacity: 1;
+        }
+
+        @media screen and (max-width: 899px) {
+            background: unset;
+            filter: none;
+            max-width: 100%;
+            padding: 1rem 0;
+        }
+    }
+
+    & .ymap {
+        height: 50rem;
+
+        @media screen and (max-width: 899px) {
+            height: 20rem;
         }
     }
 }

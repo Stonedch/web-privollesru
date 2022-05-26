@@ -36,4 +36,9 @@
         text-align: center;
         max-width: 80%;
     }
+
+    @media screen and (max-width: 899px) {
+        align-items: center;
+        text-align: center;
+    }
 }
