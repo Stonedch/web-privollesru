@@ -1,3 +1,5 @@
+import os
+import sys
 from pathlib import Path
 
 from dotenv import dotenv_values
@@ -19,6 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'callbacks',
 ]
 
 MIDDLEWARE = [
