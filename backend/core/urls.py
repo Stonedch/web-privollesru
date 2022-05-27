@@ -4,13 +4,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from rest_framework import routers
-from rest_framework import permissions
 
 from callbacks.urls import router as callbacks_router
+from questions.urls import router as questions_router
 
 router = routers.DefaultRouter()
 
 router.registry.extend(callbacks_router.registry)
+router.registry.extend(questions_router.registry)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
