@@ -80,6 +80,21 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100,
+}
+
 LANGUAGE_CODE = config['LANGUAGE_CODE']
 
 TIME_ZONE = 'UTC'
@@ -108,3 +123,11 @@ EMAIL_USE_SSL = config['EMAIL_USE_SSL'].lower() in (
     'true', '1', 't', 'y')
 
 RECIPIENT_LIST = config['RECIPIENT_LIST'].split(' ')
+
+STATIC_ROOT = BASE_DIR / '.static/'
+
+STATIC_URL = '/staticfiles/'
+
+MEDIA_ROOT = BASE_DIR / '.media/'
+
+MEDIA_URL = '/media/'
