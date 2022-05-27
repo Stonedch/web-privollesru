@@ -10,9 +10,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config['SECRET_KEY']
 
-DEBUG = config['DEBUG'].lower() in [True, 1, '1', 'true', 'True']
+DEBUG = config['DEBUG'].lower() in ('true', '1', 't', 'y')
 
-ALLOWED_HOSTS = config['ALLOWED_HOSTS'].split()
+ALLOWED_HOSTS = config['ALLOWED_HOSTS'].split(' ')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -21,6 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
 
     'callbacks',
 ]
@@ -88,3 +90,20 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = config['EMAIL_BACKEND']
+
+EMAIL_HOST = config['EMAIL_HOST']
+
+EMAIL_PORT = config['EMAIL_PORT']
+
+EMAIL_HOST_USER = config['EMAIL_HOST_USER']
+
+EMAIL_HOST_PASSWORD = config['EMAIL_HOST_PASSWORD']
+
+EMAIL_USE_TLS = config['EMAIL_USE_TLS'].lower() in ('true', '1', 't', 'y')
+
+EMAIL_USE_SSL = config['EMAIL_USE_SSL'].lower() in (
+    'true', '1', 't', 'y')
+
+RECIPIENT_LIST = config['RECIPIENT_LIST'].split(' ')
