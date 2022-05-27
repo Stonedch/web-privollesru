@@ -89,7 +89,9 @@
             flex: 0 0 33%;
             height: 100%;
             display: flex;
+            justify-content: center;
             flex-direction: column;
+            margin-right: -3rem;
 
             &:first-child {
                 justify-content: center;
@@ -118,6 +120,9 @@
 
                 &:first-child {
                     margin-top: 0;
+                }
+                @media screen and (max-width:899px) {
+                    margin-right: 3rem; 
                 }
             }
 
