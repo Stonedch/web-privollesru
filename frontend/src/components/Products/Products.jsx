@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './Products.module.scss';
 import { Title } from 'components/Title';
 import { Item } from './Item';
@@ -11,18 +11,26 @@ import 'swiper/scss/navigation';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import card00 from 'assets/products/card00.jpg';
-
 const Products = () => {
+    const { REACT_APP_API_URL } = process.env;
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
+    const [products, setProducts] = useState(null);
     const [isOpenWindow, setIsOpenWindow] = useState(false);
+
+    const endpoint = REACT_APP_API_URL + 'products/';
+
+    useEffect(() => {
+        fetch(endpoint)
+            .then((response) => response.json())
+            .then((response) => setProducts(response.results));
+    });
 
     const toggleWindow = () => {
         setIsOpenWindow(!isOpenWindow);
     };
 
-    return (
+    return products ? (
         <div className={styles.screen}>
             <div className={styles.content}>
                 <Title title='Наша продукция' />
@@ -36,58 +44,17 @@ const Products = () => {
                     modules={[Navigation]}
                     navigation
                 >
-                    <SwiperSlide>
-                        <Item
-                            background={card00}
-                            title='Круглый лес'
-                            subtitle='ГОСТ 9463-88, Сорт 1-3, 19-50см. и выше'
-                            additional={[
-                                {
-                                    title: 'Хвойные породы',
-                                    desc: 'Сосна, ель, лиственница, кедр',
-                                },
-                                {
-                                    title: 'Лиственные породы',
-                                    desc: 'Осина, береза',
-                                },
-                            ]}
-                            buttonOnClick={() => {
-                                toggleWindow();
-                            }}
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Item
-                            background={card00}
-                            title='Круглый лес'
-                            subtitle='ГОСТ 9463-88, Сорт 1-3, 19-50см. и выше'
-                            additional={[
-                                {
-                                    title: 'Хвойные породы',
-                                    desc: 'Сосна, ель, лиственница, кедр',
-                                },
-                                {
-                                    title: 'Лиственные породы',
-                                    desc: 'Осина, береза',
-                                },
-                                {
-                                    title: 'Лиственные породы',
-                                    desc: 'Осина, береза',
-                                },
-                                {
-                                    title: 'Лиственные породы',
-                                    desc: 'Осина, береза',
-                                },
-                                {
-                                    title: 'Лиственные породы',
-                                    desc: 'Осина, береза',
-                                },
-                            ]}
-                            buttonOnClick={() => {
-                                toggleWindow();
-                            }}
-                        />
-                    </SwiperSlide>
+                    {products.map((product) => (
+                        <SwiperSlide>
+                            <Item
+                                background={product.picture}
+                                title={product.title}
+                                subtitle={product.subtitle}
+                                additional={product.additionals}
+                                buttonOnClick={toggleWindow}
+                            />
+                        </SwiperSlide>
+                    ))}
                     <div
                         className={`${styles.button} ${styles.prev}`}
                         ref={navigationPrevRef}
@@ -116,7 +83,7 @@ const Products = () => {
                 </Form>
             </ModalWindow>
         </div>
-    );
+    ) : null;
 };
 
 export { Products };
