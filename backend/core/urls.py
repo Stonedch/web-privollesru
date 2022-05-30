@@ -7,11 +7,13 @@ from rest_framework import routers
 
 from callbacks.urls import router as callbacks_router
 from questions.urls import router as questions_router
+from products.urls import router as products_router
 
 router = routers.DefaultRouter()
 
 router.registry.extend(callbacks_router.registry)
 router.registry.extend(questions_router.registry)
+router.registry.extend(products_router.registry)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
