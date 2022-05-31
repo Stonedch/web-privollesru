@@ -41,10 +41,15 @@
         transform: translate(0, -100vh);
         transition: all 0.3s ease-in-out;
         width: 25rem;
-        max-width: 80vw;
+        max-width: 90vw;
         background: #fafafa;
         color: #212121;
         padding: 3rem;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 899px) {
+            padding: 1rem;
+        }
     }
 
     & .close {
@@ -88,6 +93,11 @@
 
         &::after {
             transform: rotate(-45deg);
+        }
+
+        @media screen and (max-width: 899px) {
+            font-size: 1.25rem;
+            right: 0;
         }
     }
 }

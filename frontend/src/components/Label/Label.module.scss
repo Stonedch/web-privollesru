@@ -9,5 +9,13 @@
         font-size: 1.2rem;
         font-weight: 500;
         margin-bottom: 0.5rem;
+
+        @media screen and (max-width: 899px) {
+            font-weight: 700;
+        }
+    }
+
+    @media screen and (max-width: 899px) {
+        width: 100%;
     }
 }

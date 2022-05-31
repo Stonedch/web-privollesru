@@ -119,6 +119,10 @@
                 &:first-child {
                     margin-top: 0;
                 }
+
+                @media screen and (max-width: 899px) {
+                    margin-top: 0.5rem;
+                }
             }
 
             @media screen and (max-width: 899px) {
