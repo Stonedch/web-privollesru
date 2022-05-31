@@ -6,7 +6,8 @@ import { Label } from 'components/Label';
 import { Input } from 'components/Input';
 
 function Form(props) {
-    const { title, subtitle, className, buttonText, children } = props;
+    const { title, subtitle, className, buttonText, children, buttonOnClick } =
+        props;
 
     const form = children ? (
         children
@@ -39,7 +40,9 @@ function Form(props) {
                 <span className={styles.subtitle}>{subtitle}</span>
             ) : null}
             {form}
-            <Button>{buttonText ? buttonText : 'Отправить заявку'}</Button>
+            <Button onClick={buttonOnClick ? buttonOnClick : null}>
+                {buttonText ? buttonText : 'Отправить заявку'}
+            </Button>
             <Link className={styles.privacy} to='/privacy/'>
                 Нажимая кнопку «{buttonText ? buttonText : 'Отправить заявку'}»
                 вы соглашаетесь с политикой обработки персональных данных
