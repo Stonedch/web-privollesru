@@ -20,8 +20,8 @@ class Settings(SingletonModel):
     map_x = models.FloatField(null=True, verbose_name=_('map_x'))
     map_y = models.FloatField(null=True, verbose_name=_('map_y'))
     map_zoom = models.IntegerField(null=True, verbose_name=_('map_zoom'))
-    yandex_metrika = models.TextField(
-        null=True, verbose_name=_('yandex_metrika'))
+    yandex_metrika = models.CharField(
+        max_length=128, null=True, verbose_name=_('yandex_metrika'))
 
     class Meta:
         verbose_name = _('settings')
