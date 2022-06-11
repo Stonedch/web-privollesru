@@ -7,6 +7,8 @@ import { Input } from 'components/Input';
 import { ModalWindow } from 'components/ModalWindow';
 
 const Map = () => {
+    const { REACT_APP_API_URL } = process.env;
+    const endpoint = REACT_APP_API_URL + 'callbacks/';
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [desc, setDesc] = useState('');
@@ -44,7 +46,7 @@ const Map = () => {
             body: JSON.stringify({ fullname: name, phone_number: phone }),
         };
 
-        fetch('http://stch.online/api/v1/callbacks/', requestOptions).then(
+        fetch(endpoint, requestOptions).then(
             (response) => {
                 if (response.ok) {
                     setMessage('Заявка была отправлена!');

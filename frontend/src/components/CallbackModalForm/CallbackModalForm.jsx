@@ -6,6 +6,8 @@ import { Label } from 'components/Label';
 import { Input } from 'components/Input';
 
 const CallbackModalForm = (props) => {
+    const { REACT_APP_API_URL } = process.env;
+    const endpoint = REACT_APP_API_URL + 'callbacks/';
     const { title, isOpen } = props;
     const [isOpenWindow, setIsOpenWindow] = useState(isOpen);
     const [isOpenMessage, setIsOpenMessage] = useState(false);
@@ -42,7 +44,7 @@ const CallbackModalForm = (props) => {
             body: JSON.stringify({ fullname: name, phone_number: phone }),
         };
 
-        fetch('http://stch.online/api/v1/callbacks/', requestOptions).then(
+        fetch(endpoint, requestOptions).then(
             (response) => {
                 if (response.ok) {
                     setMessage('Заявка была отправлена!');
