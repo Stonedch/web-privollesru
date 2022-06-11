@@ -44,19 +44,17 @@ const CallbackModalForm = (props) => {
             body: JSON.stringify({ fullname: name, phone_number: phone }),
         };
 
-        fetch(endpoint, requestOptions).then(
-            (response) => {
-                if (response.ok) {
-                    setMessage('Заявка была отправлена!');
-                    toggleMessage();
-                    toggleWindow();
-                } else {
-                    setMessage('Ошибка: попробуйте позднее!');
-                    toggleMessage();
-                    toggleWindow();
-                }
+        fetch(endpoint, requestOptions).then((response) => {
+            if (response.ok) {
+                setMessage('Заявка была отправлена!');
+                toggleMessage();
+                toggleWindow();
+            } else {
+                setMessage('Ошибка: попробуйте позднее!');
+                toggleMessage();
+                toggleWindow();
             }
-        );
+        });
 
         setName('');
         setPhone('');
@@ -94,7 +92,8 @@ const CallbackModalForm = (props) => {
                         <Input
                             type='tel'
                             name='phone_number'
-                            placeholder='+7 (___) ___ __ __'
+                            placeholder='+7 (___) ___-__-__'
+                            mask='+7 (999) 999-99-99'
                             value={phone}
                             onChange={(event) => setPhone(event.target.value)}
                         />

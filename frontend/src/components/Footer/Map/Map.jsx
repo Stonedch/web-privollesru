@@ -112,7 +112,8 @@ const Map = () => {
                                 <Input
                                     type='tel'
                                     name='phone_number'
-                                    placeholder='+7 (___) ___ __ __'
+                                    placeholder='+7 (___) ___-__-__'
+                                    mask='+7 (999) 999-99-99'
                                     value={phone}
                                     onChange={(event) =>
                                         setPhone(event.target.value)
