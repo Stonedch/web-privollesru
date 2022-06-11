@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './Item.module.scss';
-import { Button } from 'components/Button';
 
 const Item = (props) => {
-    const { background, title, subtitle, additional, buttonOnClick } = props;
+    const { background, title, subtitle, additional } = props;
 
     return (
         <div className={styles.card}>
@@ -29,12 +28,6 @@ const Item = (props) => {
                           ))
                         : null}
                 </div>
-                <Button
-                    opacity={true}
-                    onClick={buttonOnClick ? buttonOnClick : null}
-                >
-                    Узнать цены
-                </Button>
             </div>
         </div>
     );

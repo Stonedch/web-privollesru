@@ -6,7 +6,7 @@ import { Label } from 'components/Label';
 import { Input } from 'components/Input';
 
 function Form(props) {
-    const { title, subtitle, className, buttonText, children, buttonOnClick } =
+    const { title, subtitle, className, buttonText, children, onSubmit } =
         props;
 
     const form = children ? (
@@ -34,13 +34,13 @@ function Form(props) {
     );
 
     return (
-        <form className={`${styles.form} ${className}`} method='POST' action=''>
+        <form className={`${styles.form} ${className}`} onSubmit={onSubmit}>
             {title ? <h3 className={styles.title}>{title}</h3> : null}
             {subtitle ? (
                 <span className={styles.subtitle}>{subtitle}</span>
             ) : null}
             {form}
-            <Button onClick={buttonOnClick ? buttonOnClick : null}>
+            <Button type='submit'>
                 {buttonText ? buttonText : 'Отправить заявку'}
             </Button>
             <Link className={styles.privacy} to='/privacy/'>

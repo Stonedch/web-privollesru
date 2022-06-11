@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './Input.module.scss';
 
 function Input(props) {
-    const { name, type, value, placeholder } = props;
+    const { name, type, value, placeholder, onChange } = props;
 
     return (
         <input
@@ -11,6 +11,7 @@ function Input(props) {
             name={name}
             placeholder={placeholder}
             value={value}
+            onChange={onChange ? onChange : null}
         />
     );
 }

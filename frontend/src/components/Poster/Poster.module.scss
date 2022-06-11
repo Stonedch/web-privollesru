@@ -104,7 +104,12 @@
             &:last-child {
                 justify-content: flex-end;
                 align-items: flex-end;
-                text-align: end;
+
+                & .par,
+                .phone,
+                .title {
+                    text-align: end;
+                }
 
                 @media screen and (max-width: 899px) {
                     align-items: center;
@@ -112,16 +117,18 @@
                 }
             }
 
-            & > * {
+            & > .title,
+            .phone,
+            .par {
                 margin: 0;
-                margin-top: 1rem;
+                margin-bottom: 1rem;
 
-                &:first-child {
-                    margin-top: 0;
+                &:last-child {
+                    margin-bottom: 0;
                 }
 
                 @media screen and (max-width: 899px) {
-                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
                 }
             }
 

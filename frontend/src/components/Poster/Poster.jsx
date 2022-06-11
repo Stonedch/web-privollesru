@@ -1,22 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Poster.module.scss';
-import { ModalWindow } from 'components/ModalWindow';
-import { Form } from 'components/Form';
-import { Label } from 'components/Label';
-import { Input } from 'components/Input';
-import { Button } from 'components/Button';
 import logotype from 'assets/brand/mini.svg';
 import background from 'assets/backgrounds/poster.jpg';
 import avatar from 'assets/avatar.png';
+import { CallbackModalForm } from 'components/CallbackModalForm';
 
 const Poster = () => {
-    const [isOpenWindow, setIsOpenWindow] = useState(false);
-
-    const toggleWindow = () => {
-        setIsOpenWindow(!isOpenWindow);
-    };
-
     return (
         <div className={`${styles.poster} ${styles.screen}`}>
             <div className={styles.background}>
@@ -49,28 +39,9 @@ const Poster = () => {
                     <a className={styles.phone} href='tel: +79103866661'>
                         +7 (910) 386-66-61
                     </a>
-                    <Button onClick={() => toggleWindow()} opacity={true}>
-                        Заказать звонок
-                    </Button>
+                    <CallbackModalForm title='Заказать звонок' />
                 </div>
             </div>
-            <ModalWindow isOpen={isOpenWindow} onClose={toggleWindow}>
-                <Form
-                    title='Мы заинтересованы в сотрудничестве с Вами!'
-                    subtitle='Оставьте заявку в наш Экспортный отдел! Узнайте стоимость доставки до Вашей страны!'
-                >
-                    <Label title='Ваше имя'>
-                        <Input type='text' name='name' placeholder='Иван' />
-                    </Label>
-                    <Label title='Введите номер телефона'>
-                        <Input
-                            type='tel'
-                            name='phone_number'
-                            placeholder='+7 (___) ___ __ __'
-                        />
-                    </Label>
-                </Form>
-            </ModalWindow>
         </div>
     );
 };

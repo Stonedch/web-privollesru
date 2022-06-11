@@ -1,19 +1,20 @@
 import React from 'react';
 import styles from './Button.module.scss';
 
-function Button(props) {
-    const { onClick, opacity, children } = props;
+const Button = (props) => {
+    const { onClick, opacity, type, children } = props;
 
     return (
-        <div
+        <button
             className={[styles.button, opacity ? styles.opacity : null].join(
                 ' '
             )}
             onClick={onClick}
+            type={type ? type : null}
         >
             {children}
-        </div>
+        </button>
     );
-}
+};
 
 export { Button };
