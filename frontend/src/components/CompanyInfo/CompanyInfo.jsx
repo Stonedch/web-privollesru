@@ -1,20 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import styles from './CompanyInfo.module.scss';
 
-function CompanyInfo(props) {
+const CompanyInfo = (props) => {
     const { className } = props;
+    const { REACT_APP_API_URL } = process.env;
+    const location = useLocation();
+    const [firstNumber, setFirstNumber] = useState();
+    const [secondNumber, setSecondNumber] = useState();
+    const [workingTime, setWorkingTime] = useState(null);
+
+    useEffect(() => {
+        const endpoint = REACT_APP_API_URL + 'settings/';
+
+        const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        };
+
+        fetch(endpoint, requestOptions)
+            .then((response) => response.json())
+            .then((response) => {
+                setFirstNumber(response.first_number);
+                setSecondNumber(response.second_number);
+                setWorkingTime(response.working_time);
+            });
+    }, [location]);
 
     return (
         <div className={`${styles.info} ${className}`}>
             <div className={styles.top}>
-                <a href='tel:+79877575718'>+7 (987) 757-57-18</a>
-                <a href='tel:+79103866661'>+7 (910) 386-66-61</a>
+                {firstNumber ? (
+                    <a href={`tel:${firstNumber}`}>{firstNumber}</a>
+                ) : null}
+                {secondNumber ? (
+                    <a href={`tel:${secondNumber}`}>{secondNumber}</a>
+                ) : null}
             </div>
             <div className={styles.bottom}>
-                <span>пн-вс, 08:00-18:00 (по МСК)</span>
+                {workingTime ? <span>{workingTime}</span> : null}
             </div>
         </div>
     );
-}
+};
 
 export { CompanyInfo };

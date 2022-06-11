@@ -1,34 +1,50 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Map.module.scss';
 import { YMaps, Map as YMap, Placemark } from 'react-yandex-maps';
 import { Form } from 'components/Form';
 import { Label } from 'components/Label';
 import { Input } from 'components/Input';
 import { ModalWindow } from 'components/ModalWindow';
+import { useLocation } from 'react-router-dom';
 
 const Map = () => {
     const { REACT_APP_API_URL } = process.env;
-    const endpoint = REACT_APP_API_URL + 'callbacks/';
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [desc, setDesc] = useState('');
     const [message, setMessage] = useState('');
     const [isOpenMessage, setIsOpenMessage] = useState(false);
+    const [mapData, setMapData] = useState(null);
+    const location = useLocation();
 
     const toggleMessage = () => {
         setIsOpenMessage(!isOpenMessage);
     };
 
-    const mapData = {
-        center: [56.32096154775088, 44.00040879833978],
-        zoom: 11,
-        behaviors: [],
-    };
-
     const points = [[56.349375, 44.080403]];
+
+    useEffect(() => {
+        const endpoint = REACT_APP_API_URL + 'settings/';
+
+        const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        };
+
+        fetch(endpoint, requestOptions)
+            .then((response) => response.json())
+            .then((response) =>
+                setMapData({
+                    center: [response.map_x, response.map_y],
+                    zoom: response.map_zoom,
+                })
+            );
+    }, [location]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        const endpoint = REACT_APP_API_URL + 'callbacks/';
 
         if (name == '') {
             setMessage('Ошибка: укажите Ваше имя!');
@@ -46,17 +62,15 @@ const Map = () => {
             body: JSON.stringify({ fullname: name, phone_number: phone }),
         };
 
-        fetch(endpoint, requestOptions).then(
-            (response) => {
-                if (response.ok) {
-                    setMessage('Заявка была отправлена!');
-                    toggleMessage();
-                } else {
-                    setMessage('Ошибка: попробуйте позднее!');
-                    toggleMessage();
-                }
+        fetch(endpoint, requestOptions).then((response) => {
+            if (response.ok) {
+                setMessage('Заявка была отправлена!');
+                toggleMessage();
+            } else {
+                setMessage('Ошибка: попробуйте позднее!');
+                toggleMessage();
             }
-        );
+        });
 
         setName('');
         setPhone('');
@@ -115,19 +129,21 @@ const Map = () => {
                         </Form>
                     </div>
                 </div>
-                <YMaps>
-                    <YMap
-                        className={styles.ymap}
-                        defaultState={mapData}
-                        width={'100%'}
-                    >
-                        {points
-                            ? points.map((point) => (
-                                  <Placemark geometry={point} />
-                              ))
-                            : null}
-                    </YMap>
-                </YMaps>
+                {mapData ? (
+                    <YMaps>
+                        <YMap
+                            className={styles.ymap}
+                            defaultState={mapData}
+                            width={'100%'}
+                        >
+                            {points
+                                ? points.map((point) => (
+                                      <Placemark geometry={point} />
+                                  ))
+                                : null}
+                        </YMap>
+                    </YMaps>
+                ) : null}
             </div>
         </>
     );

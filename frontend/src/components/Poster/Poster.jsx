@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Poster.module.scss';
 import logotype from 'assets/brand/mini.svg';
 import background from 'assets/backgrounds/poster.jpg';
@@ -7,6 +7,27 @@ import avatar from 'assets/avatar.png';
 import { CallbackModalForm } from 'components/CallbackModalForm';
 
 const Poster = () => {
+    const { REACT_APP_API_URL } = process.env;
+    const location = useLocation();
+    const [firstNumber, setFirstNumber] = useState();
+    const [secondNumber, setSecondNumber] = useState();
+
+    useEffect(() => {
+        const endpoint = REACT_APP_API_URL + 'settings/';
+
+        const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        };
+
+        fetch(endpoint, requestOptions)
+            .then((response) => response.json())
+            .then((response) => {
+                setFirstNumber(response.first_number);
+                setSecondNumber(response.second_number);
+            });
+    }, [location]);
+
     return (
         <div className={`${styles.poster} ${styles.screen}`}>
             <div className={styles.background}>
@@ -33,12 +54,19 @@ const Poster = () => {
                     <p className={styles.par}>
                         и мы вышлем Вам прайс на интересующую Вас продукцию!
                     </p>
-                    <a className={styles.phone} href='tel: +79877575718'>
-                        +7 (987) 757-57-18
-                    </a>
-                    <a className={styles.phone} href='tel: +79103866661'>
-                        +7 (910) 386-66-61
-                    </a>
+                    {firstNumber ? (
+                        <a className={styles.phone} href={`tel:${firstNumber}`}>
+                            {firstNumber}
+                        </a>
+                    ) : null}
+                    {secondNumber ? (
+                        <a
+                            className={styles.phone}
+                            href={`tel:${secondNumber}`}
+                        >
+                            {secondNumber}
+                        </a>
+                    ) : null}
                     <CallbackModalForm title='Заказать звонок' />
                 </div>
             </div>
