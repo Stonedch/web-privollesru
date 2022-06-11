@@ -15,13 +15,12 @@ const Map = () => {
     const [message, setMessage] = useState('');
     const [isOpenMessage, setIsOpenMessage] = useState(false);
     const [mapData, setMapData] = useState(null);
+    const [points, setPoints] = useState(null);
     const location = useLocation();
 
     const toggleMessage = () => {
         setIsOpenMessage(!isOpenMessage);
     };
-
-    const points = [[56.349375, 44.080403]];
 
     useEffect(() => {
         const endpoint = REACT_APP_API_URL + 'settings/';
@@ -33,12 +32,17 @@ const Map = () => {
 
         fetch(endpoint, requestOptions)
             .then((response) => response.json())
-            .then((response) =>
+            .then((response) => {
                 setMapData({
                     center: [response.map_x, response.map_y],
                     zoom: response.map_zoom,
-                })
-            );
+                });
+                setPoints(
+                    response.points.map((point) => [point.map_x, point.map_y])
+                );
+
+                console.log(points);
+            });
     }, [location]);
 
     const handleSubmit = (event) => {
@@ -138,7 +142,10 @@ const Map = () => {
                         >
                             {points
                                 ? points.map((point) => (
-                                      <Placemark geometry={point} />
+                                      <>
+                                          {console.log(point)}
+                                          <Placemark geometry={point} />
+                                      </>
                                   ))
                                 : null}
                         </YMap>
