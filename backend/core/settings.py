@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'callbacks',
     'questions',
     'products',
+    'settings',
 ]
 
 MIDDLEWARE = [
