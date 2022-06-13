@@ -7,6 +7,7 @@ class Product(models.Model):
     subtitle = models.CharField(max_length=512, verbose_name=_('subtitle'))
     picture = models.ImageField(
         upload_to='products', blank=True, null=True, verbose_name=_('picture'))
+    price = models.FloatField(blank=True, null=True, verbose_name=_('price'))
     created = models.DateTimeField(
         auto_now_add=True, verbose_name=_('created'))
     updated = models.DateTimeField(auto_now=True, verbose_name=_('updated'))
