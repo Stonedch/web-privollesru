@@ -1,0 +1,74 @@
+@import 'index.scss';
+
+.products {
+    & .content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        & .item {
+            flex: 1 0 calc(100% / 3 - 2rem);
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.05);
+                box-shadow: 0px 2px 8px 0px rgba(34, 60, 80, 0.2);
+            }
+
+            & .image {
+                width: 100%;
+                height: 16rem;
+                margin-bottom: 0.5rem;
+                overflow: hidden;
+
+                & > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    transition: transform 3s ease-in-out;
+                }
+            }
+
+            & .body {
+                padding: 0.5rem 1rem;
+
+                & > * {
+                    margin: {
+                        top: 0;
+                        bottom: 0.5rem;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                & .title {
+                    font-size: 1.3rem;
+                    font-weight: 700;
+                }
+
+                & .price {
+                    text-align: end;
+                    font-size: 1rem;
+                    font-weight: 700;
+                    line-height: 1;
+                }
+
+                & .row {
+                    display: flex;
+                    justify-content: space-between;
+
+                    & > :first-child {
+                        flex: 0 1 80%;
+                    }
+
+                    & > :last-child {
+                        flex: 1 0 20%;
+                    }
+                }
+            }
+        }
+    }
+}

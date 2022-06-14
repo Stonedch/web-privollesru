@@ -6,6 +6,7 @@ const Nav = () => {
     return (
         <nav className={styles.nav}>
             <Link to='/'>Главная</Link>
+            <Link to='/products/'>Продукция</Link>
             <Link to='/contacts/'>Контакты</Link>
             <Link to='/about/'>О нас</Link>
         </nav>

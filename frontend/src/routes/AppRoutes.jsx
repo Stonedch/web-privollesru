@@ -5,6 +5,7 @@ import { PrivacyView } from 'views/PrivacyView';
 import { ContactsView } from 'views/ContactsView';
 import { NotFoundView } from 'views/NotFoundView';
 import { AboutUsView } from 'views/AboutUsView';
+import { ProductsView } from 'views/ProductsView';
 
 function AppRoutes() {
     return (
@@ -13,6 +14,7 @@ function AppRoutes() {
             <Route path='/privacy/' element={<PrivacyView />} />
             <Route path='/contacts/' element={<ContactsView />} />
             <Route path='/about/' element={<AboutUsView />} />
+            <Route path='/products/' element={<ProductsView />} />
             <Route path='*' element={<NotFoundView />} />
         </Routes>
     );
