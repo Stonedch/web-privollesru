@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import styles from './Products.module.scss';
+import styles from './ProductsCarousel.module.scss';
 import { Title } from 'components/Title';
 import { Item } from './Item';
 import 'swiper/scss';
@@ -8,7 +8,7 @@ import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { CallbackModalForm } from 'components/CallbackModalForm';
 
-const Products = () => {
+const ProductsCarousel = () => {
     const { REACT_APP_API_URL } = process.env;
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
@@ -63,4 +63,4 @@ const Products = () => {
     ) : null;
 };
 
-export { Products };
+export { ProductsCarousel };
