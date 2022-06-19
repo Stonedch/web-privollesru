@@ -1,3 +1,11 @@
 # https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+User-Agent: *
+
+Disallow: /api/
+Disallow: /swagger/
+Disallow: /redoc/
+Disallow: /admin/
+
+Host: http://privolles.ru
+
+Sitemap: http://privolles.ru/sitemap.xml
