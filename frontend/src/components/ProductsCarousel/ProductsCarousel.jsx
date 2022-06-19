@@ -7,12 +7,14 @@ import 'swiper/scss/navigation';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { CallbackModalForm } from 'components/CallbackModalForm';
+import { useLocation } from 'react-router-dom';
 
 const ProductsCarousel = () => {
     const { REACT_APP_API_URL } = process.env;
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
     const [products, setProducts] = useState(null);
+    const location = useLocation();
 
     const endpoint = REACT_APP_API_URL + 'products/';
 
@@ -20,7 +22,7 @@ const ProductsCarousel = () => {
         fetch(endpoint)
             .then((response) => response.json())
             .then((response) => setProducts(response.results));
-    });
+    }, [location]);
 
     return products ? (
         <div className={styles.screen}>

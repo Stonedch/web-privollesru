@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import styles from './Products.module.scss';
 
 const Products = () => {
     const { REACT_APP_API_URL } = process.env;
     const [products, setProducts] = useState(null);
+    const location = useLocation();
 
     const endpoint = REACT_APP_API_URL + 'products/';
 
@@ -11,7 +13,7 @@ const Products = () => {
         fetch(endpoint)
             .then((response) => response.json())
             .then((response) => setProducts(response.results));
-    });
+    }, [location]);
 
     return (
         <div className={`${styles.products} ${styles.screen}`}>
