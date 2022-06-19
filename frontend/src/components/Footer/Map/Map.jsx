@@ -63,7 +63,7 @@ const Map = () => {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ fullname: name, phone_number: phone }),
+            body: JSON.stringify({ fullname: name, phone_number: phone, description: desc }),
         };
 
         fetch(endpoint, requestOptions).then((response) => {
