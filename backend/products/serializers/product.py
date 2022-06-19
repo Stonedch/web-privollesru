@@ -15,6 +15,7 @@ class ProductSerializer(serializers.ModelSerializer):
             'subtitle',
             'picture',
             'additionals',
+            'price',
             'created',
             'updated',
         ]
