@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import styles from './Header.module.scss';
 import { Brand } from 'components/Brand';
 import { CompanyInfo } from 'components/CompanyInfo';
-import { CallbackModalForm } from 'components/CallbackModalForm';
+import { Button } from 'components/Button';
 import { Nav } from './Nav';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -26,7 +27,9 @@ const Header = () => {
                     <span className={styles.additional}>
                         В любых количествах точно в срок по РФ и на экспорт.
                     </span>
-                    <CallbackModalForm title='Каталог продукции' />
+                    <Button opacity={true}>
+                        <Link to='/products/'>Каталог продукции</Link>
+                    </Button>
                 </div>
             </div>
         </header>

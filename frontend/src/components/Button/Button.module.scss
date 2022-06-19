@@ -6,6 +6,7 @@
     font-size: 1.25rem;
     font-weight: 500;
     color: #fafafa;
+    text-decoration: none;
     text-transform: uppercase;
     text-align: center;
     background: #51961b;
@@ -16,6 +17,11 @@
 
     &:hover {
         background: #60b122;
+    }
+
+    & > * {
+        color: #fff;
+        text-decoration: none;
     }
 
     &.opacity {
