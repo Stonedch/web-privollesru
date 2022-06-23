@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-23 12:49+0300\n"
+"POT-Creation-Date: 2022-06-23 13:05+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,19 +36,33 @@ msgstr "Номер телефона"
 msgid "description"
 msgstr "Описание"
 
-#: callbacks/models/callback.py:13 products/models/additional.py:19
-#: products/models/product.py:12 questions/models/question.py:8
+#: callbacks/models/callback.py:13 clients/models/client.py:9
+#: products/models/additional.py:19 products/models/product.py:12
+#: questions/models/question.py:8
 msgid "created"
 msgstr "Добавлено"
 
-#: callbacks/models/callback.py:15 products/models/additional.py:20
-#: products/models/product.py:13 questions/models/question.py:9
+#: callbacks/models/callback.py:15 clients/models/client.py:10
+#: products/models/additional.py:20 products/models/product.py:13
+#: questions/models/question.py:9
 msgid "updated"
 msgstr "Обновлено"
 
 #: callbacks/models/callback.py:18
 msgid "callback"
 msgstr "Заявка обратной связи"
+
+#: clients/apps.py:8
+msgid "clients"
+msgstr "Клиенты"
+
+#: clients/models/client.py:7 products/models/product.py:9
+msgid "picture"
+msgstr "Изображение"
+
+#: clients/models/client.py:13 clients/models/client.py:14
+msgid "client"
+msgstr "Клиент"
 
 #: products/apps.py:8 products/models/product.py:19
 msgid "products"
@@ -74,10 +88,6 @@ msgstr "Дополнительно"
 #: products/models/product.py:7
 msgid "subtitle"
 msgstr "Подзаголовок"
-
-#: products/models/product.py:9
-msgid "picture"
-msgstr "Изображение"
 
 #: products/models/product.py:10
 msgid "price"
