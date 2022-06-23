@@ -38,33 +38,10 @@ $ git clone https://github.com/stonedch/web-privollesru.git
 # Move into project folder
 $ cd web-privollesru
 
-# Activate the Pipenv shell
-$ pipenv shell
-
-# Install from Pipfile
-$ pipenv install
-
-# Migrate
-$ python manage.py migrate
-
-# Collect static
-$ python manage.py collectstatic
-
-# Start server
-$ python manage.py runserver
-```
-
-## Setup with Docker
-
-```console
-# Clone this repository into the directory of your choice
-$ git clone https://github.com/stonedch/web-privollesru.git
-
-# Move into project folder
-$ cd web-privollesru
-
 # Setup environments
 $ cp .env.sample .env
+$ cp ./frontend/.env.sample ./frontend/.env
+$ cp ./backend/.env.sample ./backend/.env
 
 # Start docker
 $ docker-compose up -d --build
