@@ -10,3 +10,5 @@ class ProductViewSet(ModelViewSet):
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
     permission_classes = (IsAdminUser | ReadOnly, )
+    filterset_fields = ('show_in_top',)
+
