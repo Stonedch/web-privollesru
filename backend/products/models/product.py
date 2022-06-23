@@ -11,6 +11,8 @@ class Product(models.Model):
     created = models.DateTimeField(
         auto_now_add=True, verbose_name=_('created'))
     updated = models.DateTimeField(auto_now=True, verbose_name=_('updated'))
+    show_in_top = models.BooleanField(
+        default=False, verbose_name=('show_in_top'))
 
     class Meta:
         verbose_name = _('product')

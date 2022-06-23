@@ -18,4 +18,5 @@ class ProductSerializer(serializers.ModelSerializer):
             'price',
             'created',
             'updated',
+            'show_in_top',
         ]
