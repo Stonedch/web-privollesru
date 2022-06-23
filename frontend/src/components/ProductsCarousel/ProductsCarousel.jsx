@@ -16,7 +16,7 @@ const ProductsCarousel = () => {
     const [products, setProducts] = useState(null);
     const location = useLocation();
 
-    const endpoint = REACT_APP_API_URL + 'products/';
+    const endpoint = REACT_APP_API_URL + 'products/?show_in_top=1';
 
     useEffect(() => {
         fetch(endpoint)
