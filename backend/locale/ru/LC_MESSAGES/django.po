@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-06-11 17:01+0300\n"
+"POT-Creation-Date: 2022-06-23 12:49+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: callbacks/apps.py:8 callbacks/models/callback.py:19
+msgid "callbacks"
+msgstr "Заявки обратной связи"
 
 #: callbacks/models/callback.py:7
 msgid "fullname"
@@ -33,12 +37,12 @@ msgid "description"
 msgstr "Описание"
 
 #: callbacks/models/callback.py:13 products/models/additional.py:19
-#: products/models/product.py:11 questions/models/question.py:8
+#: products/models/product.py:12 questions/models/question.py:8
 msgid "created"
 msgstr "Добавлено"
 
 #: callbacks/models/callback.py:15 products/models/additional.py:20
-#: products/models/product.py:12 questions/models/question.py:9
+#: products/models/product.py:13 questions/models/question.py:9
 msgid "updated"
 msgstr "Обновлено"
 
@@ -46,9 +50,9 @@ msgstr "Обновлено"
 msgid "callback"
 msgstr "Заявка обратной связи"
 
-#: callbacks/models/callback.py:19
-msgid "callbacks"
-msgstr "Заявки обратной связи"
+#: products/apps.py:8 products/models/product.py:19
+msgid "products"
+msgstr "Продукты"
 
 #: products/models/additional.py:9 products/models/product.py:6
 #: questions/models/question.py:6
@@ -59,7 +63,7 @@ msgstr "Заголовок"
 msgid "body"
 msgstr "Тело"
 
-#: products/models/additional.py:16 products/models/product.py:15
+#: products/models/additional.py:16 products/models/product.py:18
 msgid "product"
 msgstr "Продукт"
 
@@ -75,17 +79,26 @@ msgstr "Подзаголовок"
 msgid "picture"
 msgstr "Изображение"
 
-#: products/models/product.py:16
-msgid "products"
-msgstr "Продукты"
+#: products/models/product.py:10
+msgid "price"
+msgstr "Цена"
+
+#: products/models/product.py:15
+msgid "show_in_top"
+msgstr "Показывать в топе"
+
+#: questions/apps.py:8 questions/models/question.py:13
+msgid "questions"
+msgstr "Вопросы"
 
 #: questions/models/question.py:12
 msgid "question"
 msgstr "Вопрос"
 
-#: questions/models/question.py:13
-msgid "questions"
-msgstr "Вопросы"
+#: settings/apps.py:8 settings/models/point.py:16
+#: settings/models/settings.py:27 settings/models/settings.py:28
+msgid "settings"
+msgstr "Настройки"
 
 #: settings/models/point.py:8 settings/models/settings.py:20
 msgid "map_x"
@@ -94,11 +107,6 @@ msgstr "X"
 #: settings/models/point.py:9 settings/models/settings.py:21
 msgid "map_y"
 msgstr "Y"
-
-#: settings/models/point.py:16 settings/models/settings.py:27
-#: settings/models/settings.py:28
-msgid "settings"
-msgstr "Настройки"
 
 #: settings/models/point.py:20
 msgid "point"
