@@ -7,11 +7,13 @@ import { Questions } from 'components/Questions';
 import { AboutUs } from 'components/AboutUs';
 import { Poster } from 'components/Poster';
 import { ProductsCarousel } from 'components/ProductsCarousel';
+import { Banner } from 'components/Banner';
 
 function HomeView() {
     return (
         <>
             <Header />
+            <Banner/>
             <ProductsCarousel />
             <Benefits />
             <Clients />
