@@ -22,6 +22,8 @@ class Settings(SingletonModel):
     map_zoom = models.IntegerField(null=True, verbose_name=_('map_zoom'))
     yandex_metrika = models.CharField(
         max_length=128, null=True, verbose_name=_('yandex_metrika'))
+    banner = models.ImageField(
+        upload_to='banners', blank=True, null=True, verbose_name=_('banner'))
 
     class Meta:
         verbose_name = _('settings')

@@ -21,4 +21,5 @@ class SettingsSerializer(serializers.ModelSerializer):
             'map_zoom',
             'yandex_metrika',
             'points',
+            'banner',
         ]
